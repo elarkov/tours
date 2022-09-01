@@ -1,0 +1,70 @@
+mixin header()
+  section.s-main
+    header.main-header 
+      .container.main-header__container 
+        a.logo.main-header__logo(href="") Название и фраза
+        .info.main-header__info 
+           +icon('info', 'icon-info')
+           | Помощь
+        .right-side 
+          button.button.button--border-white.reg-object Зарегистрировать свой объект
+          a.user-box(href="") 
+            +icon('user', 'icon-user')
+            | Личный кабинет
+        +sandwich
+    section.hero 
+      .container.hero__container 
+        h1.hero__header Супер текст: мотивация к путешествиям
+        ul.main-nav 
+          li.main-nav__item 
+            a(href="") 
+              +icon('building', 'icon-building') 
+              | Жилье
+          li.main-nav__item 
+            a(href="") 
+              +icon('flight', 'icon-flight')
+              | Туры
+        .main-searchbox 
+          form.form-search(action="")
+            label.form-search__label.form-search__label--search
+              input.form-search__input.input-search(type="search" placeholder="Куда вы хотите поехать?")
+            label.form-search__label.form-search__label--date
+              input.form-search__input.input-date(type="text" placeholder="Дата заезда")
+              input.form-search__input.input-date(type="text" placeholder="Дата выезда")
+            label.form-search__label.form-search__label--persons
+              span.guests 
+                span 2 взрослых
+                span · 
+                  span без детей
+            button.button.form-search__button(type="submit") Поиск
+mixin header-hotel()
+  section.s-main.s-main--hotel
+    header.main-header 
+      .container.main-header__container 
+        a.logo.main-header__logo(href="") Название и фраза
+        .info.main-header__info 
+           +icon('info', 'icon-info')
+           | Помощь
+        .right-side 
+          button.button.button--border-white.reg-object Зарегистрировать свой объект
+          a.user-box(href="") 
+            +icon('user', 'icon-user')
+            | Личный кабинет
+        +sandwich
+    section.hero 
+      .container.hero__container 
+        .main-searchbox 
+          form.form-search(action="")
+            label.form-search__label.form-search__label--search
+              input.form-search__input.input-search(type="search" placeholder="Куда вы хотите поехать?")
+            label.form-search__label.form-search__label--date
+              input.form-search__input.input-date(type="text" placeholder="Дата заезда")
+              input.form-search__input.input-date(type="text" placeholder="Дата выезда")
+            label.form-search__label.form-search__label--persons
+              span.guests 
+                span 2 взрослых
+                span · 
+                  span без детей
+            button.button.form-search__button(type="submit") Поиск
+
+

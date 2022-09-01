@@ -1,0 +1,15 @@
+mixin popup()
+  .popup-overlay(data-popup="popup-1") 
+    .popup 
+      button.close-btn.popup__btn-close(data-target="popup-1") 
+      p.popup__title Получите дизайн-проект!
+      p.popup__subtext Благодаря дизайн-проекту у вас не возникнет проблем с выбором чистовых отделочных материалов, их объемом и конечной стоимостью.
+      .popup__inner
+        form.popup-form(autocomplete="off")
+          input.popup-form__input(type="text" name="client" placeholder="Ваше имя" required)
+          input.popup-form__input(type="tel" name="phone" maxlength="18" data-tel-input placeholder="Ваш телефон" required)
+          textarea(name="msg", cols="30", rows="5" placeholder="Комментарий")
+          button.button.popup-form__button(type="submit" disabled) Отправить
+          label.privacy 
+            input(type="checkbox" checked disabled)
+            span Я ознакомлен с <a href="#">Политикой конфиденциальности</a> и даю согласие на обработку персональных данных

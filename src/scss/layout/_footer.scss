@@ -1,0 +1,122 @@
+.main-footer {
+  padding: 40px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #185C5C;
+  &__container {
+    max-width: 425px;
+    @include md-block {
+      max-width: 1190px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    @include xl-block {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.column-one {
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  @include md-block {
+    width: 165px;
+    flex: 0 0 165px;
+    padding-bottom: 0;
+    border: 0;
+  }
+  @include xl-block {
+    margin-right: 170px;
+  }
+  &__logo {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+  &__slogan {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+  }
+}
+
+.column-second {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  @include md-block {
+    width: 250px;
+    padding: 0;
+    border: 0;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+  ul {
+    li {
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.column-three {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  @include md-block {
+    width: 250px;
+    padding: 0;
+    border: 0;
+  }
+  @include xl-block {
+    margin-left: auto;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        @include xl-block {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.column-four {
+  padding: 20px 0 40px;
+  @include md-block {
+    width: 240px;
+    padding: 0;
+  }
+  @include xl-block {
+    width: 270px;
+    margin-left: auto;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+}

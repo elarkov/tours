@@ -1,0 +1,457 @@
+extends ../layout/main-hotel
+
+block mainVariables
+  - pageTitle = 'Подбор туров';
+
+block mainContent
+  main.main
+    section.inner 
+      .container.inner__container 
+        .breadcrumbs 
+          .breadcrumbs__item
+            a(href="#") Главная
+          .breadcrumbs__item.breadcrumbs__item--current 
+            a Отели Крыма
+        .inner-content 
+          aside.inner-content__sidebar 
+            .sidebar-map карта Здесь предствалены все варианты размещения из возможных по данному параметру на данные даты
+            .filter
+              //- .filter__item 
+              //-   p.filter__title Название отеля
+              //-   input.filter-input(type="text" placeholder="Например, Hilton")
+              .filter__item 
+                p.filter__title Сортировка
+                .filter__options
+                  select.filter__select(name="") 
+                    option(value="1") По популярности
+                    option(value="1") Сначала дешевые
+                    option(value="1") Сначала дорогие
+                    option(value="1") С высокой оценкой
+            .filter-select 
+              .filter-select__title Рейтинг
+              .filter-select__row 
+                label.filter-select__label.filter-select__label--s1
+                  input.filter-select__input(type="radio" name="rating" value="5")
+                  span.filter-select__name.filter-select__name--star Питание не включено
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label.filter-select__label--s2
+                  input.filter-select__input(type="radio" name="rating" value="4")
+                  span.filter-select__name.filter-select__name--star Завтрак включен
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label.filter-select__label--s3
+                  input.filter-select__input(type="radio" name="rating" value="3")
+                  span.filter-select__name.filter-select__name--star Завтрак + обед или ужин 
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label.filter-select__label--s4
+                  input.filter-select__input(type="radio" name="rating" value="2")
+                  span.filter-select__name.filter-select__name--star Завтрак, обед и ужин включены 
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label.filter-select__label--s5
+                  input.filter-select__input(type="radio" name="rating" value="1")
+                  span.filter-select__name.filter-select__name--star Все включено
+                .filter-select__count 56 
+            .filter-select 
+              .filter-select__title Тип тура
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Авторский тур")
+                  span.filter-select__name Авторский тур
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Винный тур")
+                  span.filter-select__name Винный тур
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Гастрономический тур")
+                  span.filter-select__name Гастрономический тур 
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Обучающий тур")
+                  span.filter-select__name Обучающий тур 
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Треккинг тур")
+                  span.filter-select__name Треккинг тур
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Образовательный тур")
+                  span.filter-select__name Образовательный тур
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Фототур")
+                  span.filter-select__name Фототур
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="type_tour" value="Фототур")
+                  span.filter-select__name Экскурсионный тур
+                .filter-select__count 56
+            .filter-select 
+              .filter-select__title Проживание
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="life" value="Палатки / кемпинги")
+                  span.filter-select__name Палатки / кемпинги
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="life" value="Гостевые дома / Гостиницы 1*")
+                  span.filter-select__name Гостевые дома / Гостиницы 1*
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="life" value="Гостиницы 2* / Апартаменты")
+                  span.filter-select__name Гостиницы 2* / Апартаменты
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="life" value="Гостиницы 3* / Виллы")
+                  span.filter-select__name Гостиницы 3* / Виллы  
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="life" value="Гостиницы 4-5* / Бутик-отели")
+                  span.filter-select__name Гостиницы 4-5* / Бутик-отели
+                .filter-select__count 56 
+            .filter-bottom 
+              button.filter-bottom__reset(type="reset") Очистить
+              button.filter-bottom__apply(type="submit") Применить фильтры
+          .inner-content__main 
+            p.inner-content__header Крым: найдено 67 туров
+            ul.card-tour 
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+              li.card-tour__item 
+                .card-tour__img 
+                  img(src="img/tour.jpg", alt="")
+                .card-tour__body 
+                  .card-tour__top
+                    p.card-tour__name Назавние тура
+                    .card-location
+                      +icon('location', 'tour-location')
+                      .card-location__text Локация
+                  .card-tour__info 
+                    .card-tour__info-item 
+                      span.card-tour__info-name Длительность
+                      span.card-tour__info-value 5 дней
+                    .card-tour__info-item 
+                      span.card-tour__info-name Даты
+                      span.card-tour__info-value 08.06.22-14.06.22
+                    .card-tour__info-item.card-tour__info-item--difficult 
+                      span.card-tour__info-name.card-tour__info-name--difficult Сложность
+                      span.card-tour__info-value 3/10
+                  .card-tour__route 
+                    .card-tour__route-item.card-tour__route-item--car 400 км
+                    .card-tour__route-item.card-tour__route-item--walk 38 км
+                  .tags 
+                    .tags__item 
+                      img.tags__img.tags__img--1(src="img/group-location.png", alt="")
+                      p.tags__name Комбинированные туры
+                    .tags__item 
+                      img.tags__img.tags__img--2(src="img/bus.png", alt="")
+                      p.tags__name Экскурсионные туры
+                    .tags__item 
+                      img.tags__img.tags__img--3(src="img/dog.png", alt="")
+                      p.tags__name Туры на собачьих упряжках
+                  .card-tour__lead 
+                    .card-tour__price 25 457 ₽
+                    button.card-tour__button Подробнее
+
+    section.mailing-list 
+      .container.mailing-list__container 
+        .mailing-list__top
+          +icon('mail', 'icon-mail')
+          h2.mailing-list__title Подпишитесь, чтобы получать лучшие предложения
+        form.mailing-form(action="#")
+          .mailing-form__row 
+            input.mailing-form__input(type="email" name="email" placeholder="Введите ваш e-mail")
+            button.mailing-form__button(type="submit") Подписаться
+          .privacy Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности.

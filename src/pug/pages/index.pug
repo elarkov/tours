@@ -1,0 +1,93 @@
+extends ../layout/main
+
+block mainVariables
+  - pageTitle = 'Главная';
+
+block mainContent
+  main.main
+    section.offers 
+      .container.offers__container
+        .offers-item 
+          +icon('hotel', 'icon-hotel')
+          p.offers-item__text Бронируй жилье в путешествиях по России
+        .offers-item 
+          +icon('backpack', 'icon-backpack')
+          p.offers-item__text Бронируй тур по России 
+        .offers-item 
+          +icon('credit-card', 'icon-credit-card')
+          p.offers-item__text Выбирай тип оплаты 
+        .offers-item 
+          +icon('expert', 'icon-expert')
+          p.offers-item__text Обращайся к travel-эксперту с любым вопросом 
+        .offers-item 
+          +icon('map', 'icon-map')
+          p.offers-item__text Отправляйся в свое незабываемое путешествие 
+    section.direction 
+      .container.direction__container 
+        .direction-content 
+          h2.direction-content__header Направления для отелей
+          p.direction-content__text В этих популярных местах вы точно найдете что-то для себя
+          ul.direction-card 
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+                .direction-card__count 8 295 вариантов
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+                .direction-card__count 8 295 вариантов
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+                .direction-card__count 8 295 вариантов
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+                .direction-card__count 8 295 вариантов
+        .direction-content 
+          h2.direction-content__header Направления для туров
+          p.direction-content__text В этих популярных местах вы точно найдете что-то для себя
+          ul.direction-card 
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Кавказ
+                .direction-card__count 8 295 вариантов
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Калерия
+                .direction-card__count 8 295 вариантов
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Алтай
+                .direction-card__count 8 295 вариантов
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Тыва
+                .direction-card__count 8 295 вариантов
+    section.mailing-list 
+      .container.mailing-list__container 
+        .mailing-list__top
+          +icon('mail', 'icon-mail')
+          h2.mailing-list__title Подпишитесь, чтобы получать лучшие предложения
+        form.mailing-form(action="#")
+          .mailing-form__row 
+            input.mailing-form__input(type="email" name="email" placeholder="Введите ваш e-mail")
+            button.mailing-form__button(type="submit") Подписаться
+          .privacy Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности.
+

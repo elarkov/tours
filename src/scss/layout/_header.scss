@@ -1,0 +1,341 @@
+.s-main {
+  background-image: url('../img/bg-main.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main-header {
+  padding: 17px 0;
+  @include xl-block {
+    padding: 20px 0;
+  }
+  &__container {
+    max-width: 425px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include xs-block {
+      max-width: 100%;
+    }
+    @include md-block {
+      max-width: 1190px;
+      gap: 20px;
+    }
+  }
+  &__logo {
+    margin-right: auto;
+  }
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.info {
+  width: 29px;
+  height: 29px;
+  font-size: 0;
+  @include md-block {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+}
+
+.icon-info {
+  width: 29px;
+  height: 29px;
+  @include md-block {
+    order: -1;
+  }
+}
+
+.right-side {
+  @include md-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.reg-object {
+  display: none;
+  @include md-block {
+    height: 57px;
+    display: inline-block;
+    padding: 0 24px;
+    font-weight: 600;
+    line-height: 57px;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+  }
+  &:hover {
+    background: #fff;
+    color: #07151C;
+  }
+}
+
+.user-box {
+  display: block;
+  width: 29px;
+  height: 29px;
+  font-size: 0;
+  @include md-block {
+    width: 207px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+  }
+  &:hover {
+    background: #fff;
+    color: #07151C;
+    .icon-user {
+      fill: $accent;
+    }
+  }
+}
+.icon-user {
+  width: 29px;
+  height: 29px;
+  fill: #fff;
+}
+
+.hero {
+  padding-top: 35px;
+  padding-bottom: 20px;
+  @include md-block {
+    padding-top: 52px;
+    padding-bottom: 40px;
+  }
+  &__container {
+    max-width: 425px;
+    @include xs-block {
+      max-width: 100%;
+    }
+    @include sm-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include md-block {
+      max-width: 1190px;
+      align-items: flex-start;
+    }
+  }
+  &__header {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    color: #FFFFFF;
+    @include md-block {
+      margin-bottom: 30px;
+      font-size: 40px;
+      line-height: 55px;
+    }
+  }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  @include md-block {
+    margin-bottom: 58px;
+  }
+  &__item {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 125px;
+      height: 41px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: #FFFFFF;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      @include md-block {
+        width: 135px;
+        height: 45px;
+      }
+      &:hover {
+        background: #fff;
+        color: #07151C;
+        .svg-icon {
+          fill: $accent;
+        }
+      }
+      .svg-icon {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.icon-building {
+  width: 29px;
+  height: 23px;
+}
+.icon-flight {
+  width: 29px;
+  height: 29px;
+}
+
+.main-searchbox {
+  padding: 15px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(112, 112, 112, 0.1);
+  border-radius: 5px;
+  @include xs-block {
+    width: 425px;
+  }
+  @include md-block {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.form-search {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  @include md-block {
+    flex-direction: row;
+    align-items: center;
+    padding-right: 15px;
+    gap: 0;
+  }
+  &__label {
+    position: relative;
+    @include md-block {
+      flex: 1;
+      padding: 18px 15px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: rgba(118, 118, 118, 0.3);
+    }
+    &--search {
+      @include xl-block {
+        flex: 0 0 285px;
+        width: 285px;
+      }
+    }
+    &--date {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      @include xl-block {
+        padding: 18px 0;
+        flex: 0 0 374px;
+        width: 374px;
+        gap: 0;
+      }
+      &:before {
+        @include md-block {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 1px;
+          height: 100%;
+          background: rgba(118, 118, 118, 0.3);
+        }
+      }
+    }
+    &--persons {
+      &:before {
+        right: unset;
+        left: 0;
+      }
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 10px 10px 35px;
+    border-radius: 5px;
+    @include md-block {
+      border: none;
+    }
+    &::placeholder {
+      font-size: 14px;
+    }
+
+  }
+  &__button {
+    height: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: #fff;
+    @include md-block {
+      flex: 0 0 200px;
+      width: 200px;
+    }
+    @include xl-block {
+      height: 50px;
+    }
+  }
+}
+.input-search {
+  background-image: url('../img/sprite/location.svg');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.input-date {
+  width: 132px;
+  flex: 1;
+  background-image: url('../img/sprite/date.svg');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  @include xl-block {
+    padding-left: 50px;
+    background-position: 20px center;
+  }
+}
+
+.guests {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 10px 10px 10px 15px;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  color: #000000;
+  @include md-block {
+    border: none;
+  }
+  span {
+    font-size: 14px;
+  }
+}

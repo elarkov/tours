@@ -1,0 +1,24 @@
+mixin slider()
+  section.s-slider
+    .container.s-slider__container
+      h2.s-header.s-slider__header Слайдер
+      .s-slider__content
+        .slider.js-slider
+          .swiper.slider__swiper
+            .swiper-wrapper.slider__wrapper
+              .swiper-slide.slider__slide
+                .slider__item
+                  img(data-src="img/sliders/work-1.jpg", alt="")
+              .swiper-slide.slider__slide
+                .slider__item
+                  img(data-src="img/sliders/work-2.jpg", alt="")
+              .swiper-slide.slider__slide
+                .slider__item
+                  img(data-src="img/sliders/work-3.jpg", alt="")
+              .swiper-slide.slider__slide
+                .slider__item
+                  img(data-src="img/sliders/work-4.jpg", alt="")
+        .slider__arrow.slider__arrow--prev
+          img(src="img/sliders/prev.svg", alt="")
+        .slider__arrow.slider__arrow--next
+          img(src="img/sliders/next.svg", alt="")

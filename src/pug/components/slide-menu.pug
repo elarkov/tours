@@ -1,0 +1,27 @@
+mixin slide-menu()
+  .overlay.js-side-menu__overlay
+    .side-menu.js-side__menu(data-id="menu")
+      .side-menu__top
+        a.logo.side-menu__logo(href="#!")
+          //- img(src="img/logo.png", alt="")
+        a(href="#!").side-menu__close.js-side-menu__close Закрыть
+      .side-menu__info
+        .slogan.side-menu__slogan Ледовый центр<br/> <span class="accent">Хамовники</span>
+        address.address.side-menu__address
+          p.address__item ул. Плющиха, 57
+          p.address__item м. Фрунзенская,
+          p.address__item м. Парк Культуры
+      ul.menu.side-menu__menu 
+        li.menu__item 
+          a.menu__link(href="") Школа хоккея
+        li.menu__item
+          a.menu__link(href="") Школа фигурного катания
+      .contacts.side-menu__contacts
+        a.contacts__phone(href="tel:") +7 (000) 000-00-00
+        p.contacts__hours Звоните с 9:00 до 21:00
+      .social-connect.side-menu__s-connect
+        p.social-connect__title Задайте вопрос <span class="accent">напрямую</span>
+        .social-connect__list.social-connect__list--side-menu
+          a(href="").social-connect__item.social-connect__item--first WhatsApp
+          a(href="").social-connect__item.social-connect__item--second Telegram
+    .overlay__layer.js-side-menu__close

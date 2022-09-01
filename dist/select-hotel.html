@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of the page less than 150 characters">
+    <title>Подбор отеля</title>
+    <link rel="stylesheet" href="css/style.min.css?_v=20220831171221">
+  </head>
+  <body> 
+        <div class="overlay js-side-menu__overlay">
+          <div class="side-menu js-side__menu" data-id="menu">
+            <div class="side-menu__top"><a class="logo side-menu__logo" href="#!"></a><a class="side-menu__close js-side-menu__close" href="#!">Закрыть</a></div>
+            <div class="side-menu__info">
+              <div class="slogan side-menu__slogan">Ледовый центр<br/> <span class="accent">Хамовники</span></div>
+              <address class="address side-menu__address">
+                <p class="address__item">ул. Плющиха, 57</p>
+                <p class="address__item">м. Фрунзенская,</p>
+                <p class="address__item">м. Парк Культуры</p>
+              </address>
+            </div>
+            <ul class="menu side-menu__menu"> 
+              <li class="menu__item"> <a class="menu__link" href="">Школа хоккея</a></li>
+              <li class="menu__item"><a class="menu__link" href="">Школа фигурного катания</a></li>
+            </ul>
+            <div class="contacts side-menu__contacts"><a class="contacts__phone" href="tel:">+7 (000) 000-00-00</a>
+              <p class="contacts__hours">Звоните с 9:00 до 21:00</p>
+            </div>
+            <div class="social-connect side-menu__s-connect">
+              <p class="social-connect__title">Задайте вопрос <span class="accent">напрямую</span></p>
+              <div class="social-connect__list social-connect__list--side-menu"><a class="social-connect__item social-connect__item--first" href="">WhatsApp</a><a class="social-connect__item social-connect__item--second" href="">Telegram</a></div>
+            </div>
+          </div>
+          <div class="overlay__layer js-side-menu__close"></div>
+        </div>
+        <section class="s-main s-main--hotel">
+          <header class="main-header"> 
+            <div class="container main-header__container"> <a class="logo main-header__logo" href="">Название и фраза</a>
+              <div class="info main-header__info"> 
+                    <svg class="svg-icon icon-info">
+                      <use xlink:href="img/sprite.svg#info"></use>
+                    </svg>Помощь
+              </div>
+              <div class="right-side"> 
+                <button class="button button--border-white reg-object">Зарегистрировать свой объект</button><a class="user-box" href=""> 
+                      <svg class="svg-icon icon-user">
+                        <use xlink:href="img/sprite.svg#user"></use>
+                      </svg>Личный кабинет</a>
+              </div>
+                  <div class="sandwich main-header__sandwich js-side-menu__open" data-id="menu">
+                    <div class="sandwich__inner"></div>
+                  </div>
+            </div>
+          </header>
+          <section class="hero"> 
+            <div class="container hero__container"> 
+              <div class="main-searchbox"> 
+                <form class="form-search" action="">
+                  <label class="form-search__label form-search__label--search">
+                    <input class="form-search__input input-search" type="search" placeholder="Куда вы хотите поехать?">
+                  </label>
+                  <label class="form-search__label form-search__label--date">
+                    <input class="form-search__input input-date" type="text" placeholder="Дата заезда">
+                    <input class="form-search__input input-date" type="text" placeholder="Дата выезда">
+                  </label>
+                  <label class="form-search__label form-search__label--persons"><span class="guests"> <span>2 взрослых</span><span>· <span>без детей</span></span></span></label>
+                  <button class="button form-search__button" type="submit">Поиск</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </section>
+        <main class="main">
+          <section class="inner"> 
+            <div class="container inner__container"> 
+              <div class="breadcrumbs"> 
+                <div class="breadcrumbs__item"><a href="#">Главная</a></div>
+                <div class="breadcrumbs__item breadcrumbs__item--current"> <a>Отели Крыма</a></div>
+              </div>
+              <div class="inner-content"> 
+                <aside class="inner-content__sidebar"> 
+                  <div class="sidebar-map">карта Здесь предствалены все варианты размещения из возможных по данному параметру на данные даты</div>
+                  <div class="filter">
+                    <div class="filter__item"> 
+                      <p class="filter__title">Название отеля</p>
+                      <input class="filter-input" type="text" placeholder="Например, Hilton">
+                    </div>
+                    <div class="filter__item"> 
+                      <p class="filter__title">Сортировка</p>
+                      <div class="filter__options">
+                        <select class="filter__select" name=""> 
+                          <option value="1">По популярности</option>
+                          <option value="1">Сначала дешевые</option>
+                          <option value="1">Сначала дорогие</option>
+                          <option value="1">С высокой оценкой</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-select"> 
+                    <div class="filter-select__title">Питание</div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="food" value="Питание не включено"><span class="filter-select__name">Питание не включено</span>
+                      </label>
+                      <div class="filter-select__count">56</div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="food" value="Завтрак включен"><span class="filter-select__name">Завтрак включен</span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="food" value="Завтрак + обед или ужин"><span class="filter-select__name">Завтрак + обед или ужин </span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="food" value="Завтрак, обед и ужин включены "><span class="filter-select__name">Завтрак, обед и ужин включены </span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="food" value="Все включено"><span class="filter-select__name">Все включено</span>
+                      </label>
+                      <div class="filter-select__count">56</div>
+                    </div>
+                  </div>
+                  <div class="filter-select"> 
+                    <div class="filter-select__title">Количество звезд</div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label filter-select__label--s1">
+                        <input class="filter-select__input" type="radio" name="rating" value="5"><span class="filter-select__name filter-select__name--star">Питание не включено</span>
+                      </label>
+                      <div class="filter-select__count">56</div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label filter-select__label--s2">
+                        <input class="filter-select__input" type="radio" name="rating" value="4"><span class="filter-select__name filter-select__name--star">Завтрак включен</span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label filter-select__label--s3">
+                        <input class="filter-select__input" type="radio" name="rating" value="3"><span class="filter-select__name filter-select__name--star">Завтрак + обед или ужин </span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label filter-select__label--s4">
+                        <input class="filter-select__input" type="radio" name="rating" value="2"><span class="filter-select__name filter-select__name--star">Завтрак, обед и ужин включены </span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label filter-select__label--s5">
+                        <input class="filter-select__input" type="radio" name="rating" value="1"><span class="filter-select__name filter-select__name--star">Все включено</span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                  </div>
+                  <div class="filter-select"> 
+                    <div class="filter-select__title">Тип размещения</div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="building" value="Отели"><span class="filter-select__name">Отели</span>
+                      </label>
+                      <div class="filter-select__count">56</div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="building" value="Хостелы"><span class="filter-select__name">Хостелы</span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="building" value="Апартаменты"><span class="filter-select__name">Апартаменты </span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="building" value="Коттеджи, виллы, бунгало"><span class="filter-select__name">Коттеджи, виллы, бунгало </span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="building" value="Кемпинги"><span class="filter-select__name">Кемпинги</span>
+                      </label>
+                      <div class="filter-select__count">56</div>
+                    </div>
+                  </div>
+                  <div class="filter-select"> 
+                    <div class="filter-select__title">Услуги и удобства</div>
+                    <div class="filter-select__item">
+                      <div class="filter-select__subtitle">В отеле</div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Бесплатный интернет"><span class="filter-select__name">Бесплатный интернет</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Трансфер"><span class="filter-select__name">Трансфер</span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Парковка"><span class="filter-select__name">Парковка </span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Бассейн"><span class="filter-select__name">Бассейн </span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Фитнес"><span class="filter-select__name">Фитнес</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Бар"><span class="filter-select__name">Бар</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Пляж рядом"><span class="filter-select__name">Пляж рядом</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="building" value="Горнолыжный склон рядом"><span class="filter-select__name">Горнолыжный склон рядом</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                    </div>
+                    <div class="filter-select__item">
+                      <div class="filter-select__subtitle">В номере</div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="room" value="Кондиционер"><span class="filter-select__name">Кондиционер</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="room" value="Ванная комната в номере"><span class="filter-select__name">Ванная комната в номере</span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="room" value="Окно в номере"><span class="filter-select__name">Окно в номере </span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="room" value="Кухня"><span class="filter-select__name">Кухня</span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="room" value="Балкон"><span class="filter-select__name">Балкон</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-select"> 
+                    <div class="filter-select__title">Вид из окна</div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="view" value="На море"><span class="filter-select__name">На море</span>
+                      </label>
+                      <div class="filter-select__count">56</div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="view" value="На горы"><span class="filter-select__name">На горы</span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="view" value="На реку/озеро"><span class="filter-select__name">На реку/озеро</span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                    <div class="filter-select__row"> 
+                      <label class="filter-select__label">
+                        <input class="filter-select__input" type="radio" name="view" value="На город"><span class="filter-select__name">На город </span>
+                      </label>
+                      <div class="filter-select__count">56 </div>
+                    </div>
+                  </div>
+                  <div class="filter-bottom"> 
+                    <button class="filter-bottom__reset" type="reset">Очистить</button>
+                    <button class="filter-bottom__apply" type="submit">Применить фильтры</button>
+                  </div>
+                </aside>
+                <div class="inner-content__main"> 
+                  <p class="inner-content__header">Крым: доступно 427 из 2696 отелей</p>
+                  <ul class="card-hotel"> 
+                    <li class="card-hotel__item"> 
+                      <div class="card-hotel__img"> <picture><source srcset="img/card-hotel.webp" type="image/webp"><img src="img/card-hotel.jpg" alt=""></picture>
+                        <div class="card-hotel__rating">9.3</div>
+                      </div>
+                      <div class="card-hotel__body"> 
+                        <div class="hotel-top"> 
+                          <div class="hotel-top__right"> 
+                            <div class="rating"> <picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><img src="img/star.png" alt=""></picture></picture></picture></picture></picture><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></div>
+                            <p class="hotel-top__title">Название отеля</p>
+                            <div class="hotel-top__location"> 
+                                  <svg class="svg-icon hotel-location">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                  </svg>
+                              <p class="hotel-top__text">Крым, Россия</p>
+                            </div>
+                          </div>
+                          <div class="hotel-top__left"> 
+                            <div class="price">от 25 457 ₽</div>
+                            <button class="hotel-top__button">Показать цены</button>
+                          </div>
+                        </div>
+                        <div class="hotel-description">Небольшой апарт-отель в центре Аланьи. Удобные апартаменты с аккуратной обстановкой, хороший набор услуг, до пляжа Клеопатра пара шагов. Для спокойного отдыха, подойдет для длительного размещения.</div><a class="hotel-more" href="#">Подробнее</a>
+                        <button class="hotel-button">Показать цены</button>
+                      </div>
+                    </li>
+                    <li class="card-hotel__item"> 
+                      <div class="card-hotel__img"> <picture><source srcset="img/card-hotel.webp" type="image/webp"><img src="img/card-hotel.jpg" alt=""></picture>
+                        <div class="card-hotel__rating">9.3</div>
+                      </div>
+                      <div class="card-hotel__body"> 
+                        <div class="hotel-top"> 
+                          <div class="hotel-top__right"> 
+                            <div class="rating"> <picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><img src="img/star.png" alt=""></picture></picture></picture></picture></picture><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></div>
+                            <p class="hotel-top__title">Название отеля</p>
+                            <div class="hotel-top__location"> 
+                                  <svg class="svg-icon hotel-location">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                  </svg>
+                              <p class="hotel-top__text">Крым, Россия</p>
+                            </div>
+                          </div>
+                          <div class="hotel-top__left"> 
+                            <div class="price">от 25 457 ₽</div>
+                            <button class="hotel-top__button">Показать цены</button>
+                          </div>
+                        </div>
+                        <div class="hotel-description">Небольшой апарт-отель в центре Аланьи. Удобные апартаменты с аккуратной обстановкой, хороший набор услуг, до пляжа Клеопатра пара шагов. Для спокойного отдыха, подойдет для длительного размещения.</div><a class="hotel-more" href="#">Подробнее</a>
+                        <button class="hotel-button">Показать цены</button>
+                      </div>
+                    </li>
+                    <li class="card-hotel__item"> 
+                      <div class="card-hotel__img"> <picture><source srcset="img/card-hotel.webp" type="image/webp"><img src="img/card-hotel.jpg" alt=""></picture>
+                        <div class="card-hotel__rating">9.3</div>
+                      </div>
+                      <div class="card-hotel__body"> 
+                        <div class="hotel-top"> 
+                          <div class="hotel-top__right"> 
+                            <div class="rating"> <picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><img src="img/star.png" alt=""></picture></picture></picture></picture></picture><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></div>
+                            <p class="hotel-top__title">Название отеля</p>
+                            <div class="hotel-top__location"> 
+                                  <svg class="svg-icon hotel-location">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                  </svg>
+                              <p class="hotel-top__text">Крым, Россия</p>
+                            </div>
+                          </div>
+                          <div class="hotel-top__left"> 
+                            <div class="price">от 25 457 ₽</div>
+                            <button class="hotel-top__button">Показать цены</button>
+                          </div>
+                        </div>
+                        <div class="hotel-description">Небольшой апарт-отель в центре Аланьи. Удобные апартаменты с аккуратной обстановкой, хороший набор услуг, до пляжа Клеопатра пара шагов. Для спокойного отдыха, подойдет для длительного размещения.</div><a class="hotel-more" href="#">Подробнее</a>
+                        <button class="hotel-button">Показать цены</button>
+                      </div>
+                    </li>
+                    <li class="card-hotel__item"> 
+                      <div class="card-hotel__img"> <picture><source srcset="img/card-hotel.webp" type="image/webp"><img src="img/card-hotel.jpg" alt=""></picture>
+                        <div class="card-hotel__rating">9.3</div>
+                      </div>
+                      <div class="card-hotel__body"> 
+                        <div class="hotel-top"> 
+                          <div class="hotel-top__right"> 
+                            <div class="rating"> <picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><img src="img/star.png" alt=""></picture></picture></picture></picture></picture><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></div>
+                            <p class="hotel-top__title">Название отеля</p>
+                            <div class="hotel-top__location"> 
+                                  <svg class="svg-icon hotel-location">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                  </svg>
+                              <p class="hotel-top__text">Крым, Россия</p>
+                            </div>
+                          </div>
+                          <div class="hotel-top__left"> 
+                            <div class="price">от 25 457 ₽</div>
+                            <button class="hotel-top__button">Показать цены</button>
+                          </div>
+                        </div>
+                        <div class="hotel-description">Небольшой апарт-отель в центре Аланьи. Удобные апартаменты с аккуратной обстановкой, хороший набор услуг, до пляжа Клеопатра пара шагов. Для спокойного отдыха, подойдет для длительного размещения.</div><a class="hotel-more" href="#">Подробнее</a>
+                        <button class="hotel-button">Показать цены</button>
+                      </div>
+                    </li>
+                    <li class="card-hotel__item"> 
+                      <div class="card-hotel__img"> <picture><source srcset="img/card-hotel.webp" type="image/webp"><img src="img/card-hotel.jpg" alt=""></picture>
+                        <div class="card-hotel__rating">9.3</div>
+                      </div>
+                      <div class="card-hotel__body"> 
+                        <div class="hotel-top"> 
+                          <div class="hotel-top__right"> 
+                            <div class="rating"> <picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><img src="img/star.png" alt=""></picture></picture></picture></picture></picture><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></div>
+                            <p class="hotel-top__title">Название отеля</p>
+                            <div class="hotel-top__location"> 
+                                  <svg class="svg-icon hotel-location">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                  </svg>
+                              <p class="hotel-top__text">Крым, Россия</p>
+                            </div>
+                          </div>
+                          <div class="hotel-top__left"> 
+                            <div class="price">от 25 457 ₽</div>
+                            <button class="hotel-top__button">Показать цены</button>
+                          </div>
+                        </div>
+                        <div class="hotel-description">Небольшой апарт-отель в центре Аланьи. Удобные апартаменты с аккуратной обстановкой, хороший набор услуг, до пляжа Клеопатра пара шагов. Для спокойного отдыха, подойдет для длительного размещения.</div><a class="hotel-more" href="#">Подробнее</a>
+                        <button class="hotel-button">Показать цены</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="mailing-list"> 
+            <div class="container mailing-list__container"> 
+              <div class="mailing-list__top">
+                    <svg class="svg-icon icon-mail">
+                      <use xlink:href="img/sprite.svg#mail"></use>
+                    </svg>
+                <h2 class="mailing-list__title">Подпишитесь, чтобы получать лучшие предложения</h2>
+              </div>
+              <form class="mailing-form" action="#">
+                <div class="mailing-form__row"> 
+                  <input class="mailing-form__input" type="email" name="email" placeholder="Введите ваш e-mail">
+                  <button class="mailing-form__button" type="submit">Подписаться</button>
+                </div>
+                <div class="privacy">Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности.</div>
+              </form>
+            </div>
+          </section>
+        </main>
+        <footer class="main-footer">
+          <div class="container main-footer__container">
+            <div class="column-one"> <a class="column-one__logo" href="#">Название и фраза</a>
+              <p class="column-one__slogan">Описание</p>
+            </div>
+            <div class="column-second"> 
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="column-three"> 
+              <ul> 
+                <li> <a href="#">Поиск отелей </a></li>
+                <li> <a href="#">Поиск тура</a></li>
+                <li> <a href="#">Зарегистрировать свой объект</a></li>
+                <li> <a href="#">Помощь</a></li>
+              </ul>
+            </div>
+            <div class="column-four"> 
+              <p class="column-four__title">Подпишитесь, чтобы получать лучшие предложения</p>
+              <form class="mailing-form mailing-form--footer" action="#">
+                <div class="mailing-form__row mailing-form__row--footer">
+                  <input class="mailing-form__input mailing-form__input--footer" type="email" name="email" placeholder="Введите ваш e-mail">
+                  <button class="mailing-form__button mailing-form__button--footer" type="submit">Подписаться</button>
+                </div>
+                <div class="privacy">Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности.</div>
+              </form>
+            </div>
+          </div>
+        </footer>
+        <div class="popup-overlay" data-popup="popup-1"> 
+          <div class="popup"> 
+            <button class="close-btn popup__btn-close" data-target="popup-1"> </button>
+            <p class="popup__title">Получите дизайн-проект!</p>
+            <p class="popup__subtext">Благодаря дизайн-проекту у вас не возникнет проблем с выбором чистовых отделочных материалов, их объемом и конечной стоимостью.</p>
+            <div class="popup__inner">
+              <form class="popup-form" autocomplete="off">
+                <input class="popup-form__input" type="text" name="client" placeholder="Ваше имя" required>
+                <input class="popup-form__input" type="tel" name="phone" maxlength="18" data-tel-input placeholder="Ваш телефон" required>
+                <textarea name="msg" cols="30" rows="5" placeholder="Комментарий"></textarea>
+                <button class="button popup-form__button" type="submit" disabled>Отправить</button>
+                <label class="privacy"> 
+                  <input type="checkbox" checked disabled><span>Я ознакомлен с <a href="#">Политикой конфиденциальности</a> и даю согласие на обработку персональных данных</span>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+  </body>
+  <script src="js/app.min.js?_v=20220831171221"> </script>
+</html>

@@ -1,0 +1,41 @@
+// Тема по умолчанию
+html,
+body{
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: $default-font;
+  text-rendering: optimizeSpeed;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  color: $text;
+}
+
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  @include wrapper();
+}
+
+.s-header {
+  font-weight: 400;
+  color: #000000;
+  @include xl-block {
+    font-size: 48px;
+    line-height: 65px;
+  }
+}

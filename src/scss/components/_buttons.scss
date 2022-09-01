@@ -1,0 +1,41 @@
+.button {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: 200ms ease;
+  color: #000000;
+  background: $accent;
+  cursor: pointer;
+  @include xl-block {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  &:hover {
+    background: #FF8B2C;
+    color: #fff;
+  }
+  &:active,
+  &:focus {
+    background: #FF8B2C;
+  }
+  &--border-black {
+    border: 1px solid #024849;
+  }
+  &--border-white {
+    border: 2px solid #FFFFFF;
+  }
+  &--black {
+    &:hover {
+      background: #024849;
+    }
+  }
+  &--white {
+    &:hover {
+      background: #fff;
+    }
+  }
+}
