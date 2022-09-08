@@ -1,0 +1,105 @@
+extends ../layout/main-inner
+
+block mainVariables
+  - pageTitle = 'Подбор тура внутренняя';
+
+block mainContent
+  main.main
+    section.tour-card 
+      img(src="img/bg-inner-tour.jpg", alt="")
+    section.inner 
+      .container.inner__container 
+        .breadcrumbs 
+          .breadcrumbs__item
+            a(href="#") Главная
+          .breadcrumbs__item.breadcrumbs__item--current 
+            a Отели Крыма
+        .inner-content 
+          .inner-content__main 
+            .tour-inner 
+              h1.tour-inner__header Активный тур "Осень, зима, весна" (Горная Адыгея и Кубань)
+              .tour-review 
+                .tour-review__block 
+                  .tour-review__left
+                    .tour-review__num 9,3
+                    .tour-review__info 
+                      p.tour-review__info-label Превосходно
+                      p.tour-review__info-count 2 245 отзывов
+                  a.tour-review__button(href="#") Смотреть все отзывы
+                .tour-tags 
+                  .tour-tags__item.tour-tags__item--current Тур в горы
+                  .tour-tags__item Джип тур
+                  .tour-tags__item Трекинг тур
+                  .tour-tags__item Экскурсионный тур
+              .tour-text 
+                p Активный тур  для тех, кто хочет побывать за одну неделю в предгорьях Адыгеи и Кубани. В туре получится насладиться топовыми местами Адыгеи и Кубани - это и Хаджохская теснина, и водопады реки Руфабго, и Гуамское ущелье и "Орлиные скалы" и при всём при этом  не придётся таскать  на плечах тяжёлый рюкзак. Проживание в уютных номерах в семейном коттедже в горном посёлке. Кухня домашняя. Радиальные и кольцевые выходы к водопадам,  смотровым площадкам, на вершины. Купание в бассейнах с геотермальной водой. Катание на экскурсионном паровозике по Гуамскому ущелью. Любительская орнитология, наблюдение за парящими Белоголовыми Кавказскими Сипами (занесены в красную книгу). "Джиппинг" на отечественных машинах (УАЗ-ах) высокой проходимости к панорамным точкам Гуамки.  Возможность увидеть самые заветные уголки горной Кубани и Адыгеи  налегке! 
+                h2  Программа тура
+                p <strong>Старт:</strong> 20 марта, 11:00 (местное время), Краснодар
+                p <strong>Финиш:</strong> 26 марта, 10:00 (местное время), хутор Гуамка
+                include ../components/accordion
+                +accordion
+                h2 Проживание
+                .gallery 
+                  .gallery__item 
+                    img(src="img/card-inner1.jpg", alt="")
+                  .gallery__item 
+                    img(src="img/card-inner1.jpg", alt="")
+                  .gallery__item 
+                    img(src="img/card-inner1.jpg", alt="")
+                  .gallery__item 
+                    img(src="img/card-inner1.jpg", alt="")
+                  .gallery__item 
+                    img(src="img/card-inner1.jpg", alt="")
+                  .gallery__item 
+                    img(src="img/card-inner1.jpg", alt="")
+                a.gallery-button(href="#") Смотреть все фото
+                h2 Условия
+                include ../components/accordion
+                +accordion-events
+                h2 Отзывы о туре (35)
+                ul.tour-testimonials 
+                  li.tour-testimonials__item 
+                    .tour-testimonials__top 
+                      p.tour-testimonials__name Андрей, август 2020
+                      .tour-rating 
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                      .tour-testimonials__award Оценка 4 из 5
+                    .tour-testimonials__text Тур пролетел,как один день. Эмоции зашкаливали,не ожидали с мужем, что до такой степени он будет активным,пригодились и треккинговые палки и сидушки и запасная обувь. Каждый день был заполнен до отказа новыми впечатлениями.Дмитрий энтузиаст своего дела,показал уникальные и красивые места,почувствовали единение с природой. Спасибо.
+                  li.tour-testimonials__item 
+                    .tour-testimonials__top 
+                      p.tour-testimonials__name Андреа, август 2022
+                      .tour-rating 
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                        img(src="img/star.png", alt="")
+                      .tour-testimonials__award Оценка 4 из 5
+                    .tour-testimonials__text Семья 3 человека (дочь 14 лет). Отдыхали с 10 по 23 октября 2020 года. Когда читала отзывы, думала будет намного хуже, и ещё были опасения, что отдых был в разгаре пандемии, но все оказалось более чем хорошо. Приехали в отель в 13 часов, сразу заселили на третий этаж. В номере чисто, не сказать что новое, но самое главное что чисто. Убирали через день. Полотенца меняли по запросу. За время нашего отдыха пару раз проводили дизенфекцию номера. В номере маленькая спальня с большой кроватью, в гостиной кухня с посудой, плиткой, стол, стулья, два дивана. Дочь спала на одном из них. До пляжа Клеопатра 5 минут не спеша. Дислокация отеля порадовала, множество различных магазинов. Читать полностью
+                a.tour-testimonials__button(href="#") Показать еще
+          aside.inner-content__sidebar 
+            .select-date 
+              .select-date__top 
+                p.select-date__top-text Выберите дату
+                .filter__options
+                  select.filter__select 
+                    option(value="1") 1-6 марта
+                    option(value="2") 7-13 марта
+                    option(value="3") 14-20 марта
+                    option(value="4") 20-26 марта
+              .select-date__bottom 
+                .select-date__tange 12 из 18 мест осталось
+                .select-date__count 
+                  span Количество человек
+                  .qty
+                    button.qty__btn.qty__btn--minus &minus;
+                    input(type="number" name="qty" min="1" max="10" step="1" value="1")
+                    button.qty__btn.qty__btn--plus &plus; 
+                .select-date__price 25 457 ₽
+              .select-date__nav 
+                button.select-date__button Забронировать тур
+                .select-date__mini При отмене бронирования любого путешествия в течение 24 часов после оплаты вы получаете полный возврат.

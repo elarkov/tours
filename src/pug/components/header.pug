@@ -66,5 +66,19 @@ mixin header-hotel()
                 span · 
                   span без детей
             button.button.form-search__button(type="submit") Поиск
+mixin header-inner()
+  section.s-main.s-main--inner
+    header.main-header 
+      .container.main-header__container 
+        a.logo.main-header__logo(href="") Название и фраза
+        .info.main-header__info 
+           +icon('info', 'icon-info')
+           | Помощь
+        .right-side 
+          button.button.button--border-white.reg-object Зарегистрировать свой объект
+          a.user-box(href="") 
+            +icon('user', 'icon-user')
+            | Личный кабинет
+        +sandwich
 
 

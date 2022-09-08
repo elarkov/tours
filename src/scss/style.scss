@@ -34,6 +34,7 @@
     'components/input',
     'components/privacy',
     'components/tabs',
+    'components/accordion',
     'components/popup';
 
 // layout
@@ -46,5 +47,6 @@
 // pages
 @import 
     'pages/home',
-    'pages/select-hotel';
+    'pages/select-hotel',
+    'pages/select-tour-inner';
 

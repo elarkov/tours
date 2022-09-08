@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  &--inner {
+    background-image: none!important;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #185C5C;
+  }
 }
 
 .main-header {

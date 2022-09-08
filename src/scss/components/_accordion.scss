@@ -1,0 +1,125 @@
+.accordion {
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 25px 0 0;
+      & + .accordion-list__item {
+        border-top: 1px solid #D6D6D6;
+      }
+      &:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      color: #323232;
+      @include sm-block {
+        font-size: 20px;
+        line-height: 29px;
+      }
+    }
+    &__content {
+      display: flex;
+      max-height: 0;
+      overflow-y: hidden;
+      flex-direction: column;
+      transition: all .3s ease;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: #000000;
+          @include xl-block {
+            font-size: 16px;
+            line-height: 22px;
+          }
+          &.allow {
+            position: relative;
+            padding-left: 20px;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 11px;
+              height: 12px;
+              top: 4px;
+              left: 0;
+              background-image: url('../img/allow.svg');
+              background-repeat: no-repeat;
+            }
+          }
+          &.not-allow {
+            position: relative;
+            padding-left: 20px;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 11px;
+              height: 12px;
+              top: 0;
+              left: 0;
+              background-image: url('../img/not-allow.svg');
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        + p {
+          margin-top: 10px;
+        }
+      }
+    }
+    &__button {
+      position: relative;
+      width: 31px;
+      height: 31px;
+      padding: 0;
+      flex-shrink: 0;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../img/point-list.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.accordion-list__item.isActive .accordion-list__title {
+  color: #EF5E3A;
+}
+.accordion-list__item.isActive .accordion-list__content {
+  gap: 15px;
+  max-height: 100%;
+  overflow-y: unset;
+  transition: all .3s ease;
+}
+.accordion-list__item.isActive .accordion-list__button:before {
+  transform: rotate(-180deg);
+  border-color: #EF5E3A transparent transparent transparent;
+}
