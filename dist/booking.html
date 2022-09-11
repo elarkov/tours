@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description of the page less than 150 characters">
+    <title>Бронирование</title>
+    <link rel="stylesheet" href="css/style.min.css?_v=20220911142838">
+  </head>
+  <body> 
+        <div class="overlay js-side-menu__overlay">
+          <div class="side-menu js-side__menu" data-id="menu">
+            <div class="side-menu__top"><a class="logo side-menu__logo" href="#!"></a><a class="side-menu__close js-side-menu__close" href="#!">Закрыть</a></div>
+            <div class="side-menu__info">
+              <div class="slogan side-menu__slogan">Ледовый центр<br/> <span class="accent">Хамовники</span></div>
+              <address class="address side-menu__address">
+                <p class="address__item">ул. Плющиха, 57</p>
+                <p class="address__item">м. Фрунзенская,</p>
+                <p class="address__item">м. Парк Культуры</p>
+              </address>
+            </div>
+            <ul class="menu side-menu__menu"> 
+              <li class="menu__item"> <a class="menu__link" href="">Школа хоккея</a></li>
+              <li class="menu__item"><a class="menu__link" href="">Школа фигурного катания</a></li>
+            </ul>
+            <div class="contacts side-menu__contacts"><a class="contacts__phone" href="tel:">+7 (000) 000-00-00</a>
+              <p class="contacts__hours">Звоните с 9:00 до 21:00</p>
+            </div>
+            <div class="social-connect side-menu__s-connect">
+              <p class="social-connect__title">Задайте вопрос <span class="accent">напрямую</span></p>
+              <div class="social-connect__list social-connect__list--side-menu"><a class="social-connect__item social-connect__item--first" href="">WhatsApp</a><a class="social-connect__item social-connect__item--second" href="">Telegram</a></div>
+            </div>
+          </div>
+          <div class="overlay__layer js-side-menu__close"></div>
+        </div>
+        <section class="s-main s-main--inner">
+          <header class="main-header main-header--inner"> 
+            <div class="container main-header__container"> <a class="logo main-header__logo" href="">Название и фраза</a>
+              <div class="info main-header__info"> 
+                    <svg class="svg-icon icon-info">
+                      <use xlink:href="img/sprite.svg#info"></use>
+                    </svg>Помощь
+              </div>
+              <div class="right-side"> 
+                <button class="button button--border-white reg-object">Зарегистрировать свой объект</button><a class="user-box" href=""> 
+                      <svg class="svg-icon icon-user">
+                        <use xlink:href="img/sprite.svg#user"></use>
+                      </svg>Личный кабинет</a>
+              </div>
+                  <div class="sandwich main-header__sandwich js-side-menu__open" data-id="menu">
+                    <div class="sandwich__inner"></div>
+                  </div>
+            </div>
+          </header>
+        </section>
+        <main class="main">
+          <section class="inner"> 
+            <div class="container inner__container"> 
+              <div class="breadcrumbs"> 
+                <div class="breadcrumbs__item"><a href="#">Главная</a></div>
+                <div class="breadcrumbs__item"><a href="#">Отель крыма</a></div>
+                <div class="breadcrumbs__item"><a href="#">Отель</a></div>
+                <div class="breadcrumbs__item breadcrumbs__item--current"> <a>Бронирование</a></div>
+              </div>
+              <div class="inner-content">
+                <div class="inner-content__main">
+                  <div class="booking-card"> 
+                    <div class="booking-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
+                    <div class="booking-card__body"> 
+                      <div class="booking-rating"> 
+                        <div class="booking-rating__stars"> <picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><img src="img/star.png" alt=""></picture></picture></picture></picture></picture><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></div>
+                        <div class="booking-rating__name">Название отеля</div>
+                      </div>
+                      <div class="card-location">
+                            <svg class="svg-icon tour-location">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                            </svg>
+                        <div class="card-location__text">Локация</div>
+                      </div>
+                      <div class="booking-info"> 
+                        <div class="booking-info__name">Стандартный номер</div>
+                        <div class="booking-info__text">2 отдельные кровати, завтрак, 2 взрослых</div>
+                      </div>
+                    </div>
+                    <div class="booking-times"> 
+                      <div class="booking-times__item"> 
+                        <p class="booking-times__label">Заезд с 14:00</p>
+                        <p class="booking-times__date">21 мар 2022</p>
+                      </div>
+                      <div class="booking-times__item"> 
+                        <p class="booking-times__label">Выезд до 11:00</p>
+                        <p class="booking-times__date">26 мар 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guest-contacts"> 
+                    <div class="guest-top">
+                      <p class="guest-top__title">Контактные данные гостя</p>
+                      <div class="guest-top__rows"> 
+                        <div class="guest-top__row">
+                          <label class="guest-top__label" for="name">Имя*</label>
+                          <input class="guest-top__input" type="text" placeholder="Введите Ваше имя" name="client">
+                        </div>
+                        <div class="guest-top__row">
+                          <label class="guest-top__label" for="lastName">Фамилия*</label>
+                          <input class="guest-top__input" type="text" placeholder="Введите Вашу фамилию" name="last-name">
+                        </div>
+                        <div class="guest-top__row">
+                          <label class="guest-top__label" for="email">Электронная почта*</label>
+                          <input class="guest-top__input" type="email" placeholder="Введите email" name="email">
+                        </div>
+                        <div class="guest-top__row">
+                          <label class="guest-top__label" for="phone">Телефон для связи*</label>
+                          <input class="guest-top__input" type="tel" placeholder="+79298765465" name="phone">
+                        </div>
+                        <div class="guest-top__row">
+                          <label class="guest-top__label">Гражданство*</label>
+                          <div class="filter__options"> 
+                            <select class="filter__select">
+                              <option value="1">Российская Федерация</option>
+                              <option value="1">Бермуды</option>
+                              <option value="1">Китай</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guest-bottom"> 
+                      <div class="guest-bottom__title">Оплата кредитной или дебетовой картой</div>
+                      <p class="guest-bottom__text">Как только вы нажмёте «Завершить бронирование», с вашей карты будет списана полная стоимость проживания.</p>
+                      <div class="card-pay"> 
+                        <div class="card-pay__head"> 
+                          <div class="card-pay__row"> 
+                            <label class="card-pay__label" for="number-card">Номер карты*</label>
+                            <input class="card-pay__input" type="text" placeholder="1234 5678 9123 4567">
+                          </div>
+                          <div class="card-pay__row card-pay__row--double"> 
+                            <div class="card-pay__field"> 
+                              <label class="card-pay__label" for="long">Действует до*</label>
+                              <input class="card-pay__input" type="text" placeholder="12/25">
+                            </div>
+                            <div class="card-pay__field"> 
+                              <label class="card-pay__label" for="cvc">CVC/CVV*</label>
+                              <input class="card-pay__input" type="text" placeholder="122">
+                            </div>
+                          </div>
+                          <div class="card-pay__row"> 
+                            <label class="card-pay__label" for="name-card">Имя на карте*</label>
+                            <input class="card-pay__input" type="text" placeholder="OLGA IVANOVA">
+                          </div>
+                          <label class="card-save">
+                            <input class="card-save__input" type="checkbox"><span class="card-save__title">Сохранить карту </span>
+                          </label>
+                        </div>
+                        <div class="card-methods"> 
+                          <div class="card-methods__text">Мы принимаем</div>
+                          <div class="card-methods__items"> <picture><source srcset="img/visa.webp" type="image/webp"><img src="img/visa.png" alt=""></picture><picture><source srcset="img/mir.webp" type="image/webp"><img src="img/mir.png" alt=""></picture><picture><source srcset="img/maestro.webp" type="image/webp"><img src="img/maestro.png" alt=""></picture><picture><source srcset="img/ymoney.webp" type="image/webp"><img src="img/ymoney.png" alt=""></picture></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="booking-button">Завершить бронирование</button>
+                    <div class="privacy">Нажимая «Завершить бронирование», Вы принимаете Правила бронирования.</div>
+                  </div>
+                </div>
+                <aside class="inner-content__sidebar"> 
+                  <div class="cost-item"> 
+                    <div class="cost-item__top"> 
+                      <div class="cost-item__first">
+                        <div class="cost-item__label">
+                          <div class="cost-item__name">Стоимость номера</div>
+                          <div class="cost-item__mini">для 2 взрослых на 5 ночей</div>
+                        </div>
+                        <div class="cost-item__value">5 х 9680 ₽</div>
+                      </div>
+                      <div class="cost-item__first"> 
+                        <div class="cost-item__label">
+                          <div class="cost-item__mini">В том числе НДС</div>
+                        </div>
+                        <div class="cost-item__value">6342,39 ₽</div>
+                      </div>
+                    </div>
+                    <div class="cost-item__middle"> 
+                      <div class="cost-total"> 
+                        <div class="cost-total__name">К оплате сейчас</div>
+                        <div class="cost-total__price">25 457 ₽</div>
+                      </div>
+                      <div class="cost-item__mini">НДС входит в стоимость</div>
+                    </div>
+                    <div class="cost-item__bottom">Из-за сложной эпидемиологической ситуации в мире при регистрации заезда может потребоваться справка, подтверждающая отрицательный результат теста на COVID-19, или сертификат о вакцинации.</div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="main-footer">
+          <div class="container main-footer__container">
+            <div class="column-one"> <a class="column-one__logo" href="#">Название и фраза</a>
+              <p class="column-one__slogan">Описание</p>
+            </div>
+            <div class="column-second"> 
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+              <div class="column-second__item"> 
+                <p class="column-second__title">Безопасная оплата</p>
+                <ul> 
+                  <li> <a href="#">Бронируйте туры через нашу надежную платежную систему</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="column-three"> 
+              <ul> 
+                <li> <a href="#">Поиск отелей </a></li>
+                <li> <a href="#">Поиск тура</a></li>
+                <li> <a href="#">Зарегистрировать свой объект</a></li>
+                <li> <a href="#">Помощь</a></li>
+              </ul>
+            </div>
+            <div class="column-four"> 
+              <p class="column-four__title">Подпишитесь, чтобы получать лучшие предложения</p>
+              <form class="mailing-form mailing-form--footer" action="#">
+                <div class="mailing-form__row mailing-form__row--footer">
+                  <input class="mailing-form__input mailing-form__input--footer" type="email" name="email" placeholder="Введите ваш e-mail">
+                  <button class="mailing-form__button mailing-form__button--footer" type="submit">Подписаться</button>
+                </div>
+                <div class="privacy">Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности.</div>
+              </form>
+            </div>
+          </div>
+        </footer>
+        <div class="popup-overlay" data-popup="popup-1"> 
+          <div class="popup"> 
+            <button class="close-btn popup__btn-close" data-target="popup-1"> </button>
+            <p class="popup__title">Получите дизайн-проект!</p>
+            <p class="popup__subtext">Благодаря дизайн-проекту у вас не возникнет проблем с выбором чистовых отделочных материалов, их объемом и конечной стоимостью.</p>
+            <div class="popup__inner">
+              <form class="popup-form" autocomplete="off">
+                <input class="popup-form__input" type="text" name="client" placeholder="Ваше имя" required>
+                <input class="popup-form__input" type="tel" name="phone" maxlength="18" data-tel-input placeholder="Ваш телефон" required>
+                <textarea name="msg" cols="30" rows="5" placeholder="Комментарий"></textarea>
+                <button class="button popup-form__button" type="submit" disabled>Отправить</button>
+                <label class="privacy"> 
+                  <input type="checkbox" checked disabled><span>Я ознакомлен с <a href="#">Политикой конфиденциальности</a> и даю согласие на обработку персональных данных</span>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+  </body>
+  <script src="js/app.min.js?_v=20220911142838"> </script>
+</html>

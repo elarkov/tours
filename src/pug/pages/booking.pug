@@ -1,0 +1,116 @@
+extends ../layout/main-booking
+
+block mainVariables
+  - pageTitle = 'Бронирование';
+
+block mainContent
+  main.main
+    section.inner 
+      .container.inner__container 
+        .breadcrumbs 
+          .breadcrumbs__item
+            a(href="#") Главная
+          .breadcrumbs__item
+            a(href="#") Отель крыма
+          .breadcrumbs__item
+            a(href="#") Отель
+          .breadcrumbs__item.breadcrumbs__item--current 
+            a Бронирование
+        .inner-content
+          .inner-content__main
+            .booking-card 
+              .booking-card__img 
+                img(src="img/card.jpg", alt="")
+              .booking-card__body 
+                .booking-rating 
+                  .booking-rating__stars 
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                  .booking-rating__name Название отеля
+                .card-location
+                  +icon('location', 'tour-location')
+                  .card-location__text Локация
+                .booking-info 
+                  .booking-info__name Стандартный номер
+                  .booking-info__text 2 отдельные кровати, завтрак, 2 взрослых
+              .booking-times 
+                .booking-times__item 
+                  p.booking-times__label Заезд с 14:00
+                  p.booking-times__date 21 мар 2022
+                .booking-times__item 
+                  p.booking-times__label Выезд до 11:00
+                  p.booking-times__date 26 мар 2022
+            .guest-contacts 
+              .guest-top
+                p.guest-top__title Контактные данные гостя
+                .guest-top__rows 
+                  .guest-top__row
+                    label.guest-top__label(for="name") Имя*
+                    input.guest-top__input(type="text" placeholder="Введите Ваше имя" name="client")
+                  .guest-top__row
+                    label.guest-top__label(for="lastName") Фамилия*
+                    input.guest-top__input(type="text" placeholder="Введите Вашу фамилию" name="last-name") 
+                  .guest-top__row
+                    label.guest-top__label(for="email") Электронная почта*
+                    input.guest-top__input(type="email" placeholder="Введите email" name="email")
+                  .guest-top__row
+                    label.guest-top__label(for="phone") Телефон для связи*
+                    input.guest-top__input(type="tel" placeholder="+79298765465" name="phone")
+                  .guest-top__row
+                    label.guest-top__label Гражданство*
+                    .filter__options 
+                      select.filter__select
+                        option(value="1") Российская Федерация
+                        option(value="1") Бермуды
+                        option(value="1") Китай
+              .guest-bottom 
+                .guest-bottom__title Оплата кредитной или дебетовой картой
+                p.guest-bottom__text Как только вы нажмёте «Завершить бронирование», с вашей карты будет списана полная стоимость проживания.
+                .card-pay 
+                  .card-pay__head 
+                    .card-pay__row 
+                      label.card-pay__label(for="number-card") Номер карты*
+                      input.card-pay__input(type="text" placeholder="1234 5678 9123 4567")  
+                    .card-pay__row.card-pay__row--double 
+                      .card-pay__field 
+                        label.card-pay__label(for="long") Действует до*
+                        input.card-pay__input(type="text" placeholder="12/25")
+                      .card-pay__field 
+                        label.card-pay__label(for="cvc") CVC/CVV*
+                        input.card-pay__input(type="text" placeholder="122")
+                    .card-pay__row 
+                      label.card-pay__label(for="name-card") Имя на карте*
+                      input.card-pay__input(type="text" placeholder="OLGA IVANOVA") 
+                    label.card-save
+                      input.card-save__input(type="checkbox")
+                      span.card-save__title Сохранить карту 
+                  .card-methods 
+                    .card-methods__text Мы принимаем
+                    .card-methods__items 
+                      img(src="img/visa.png", alt="")
+                      img(src="img/mir.png", alt="")
+                      img(src="img/maestro.png", alt="")
+                      img(src="img/ymoney.png", alt="")
+              button.booking-button Завершить бронирование
+              .privacy Нажимая «Завершить бронирование», Вы принимаете Правила бронирования.
+          aside.inner-content__sidebar 
+            .cost-item 
+              .cost-item__top 
+                .cost-item__first
+                  .cost-item__label
+                    .cost-item__name Стоимость номера
+                    .cost-item__mini для 2 взрослых на 5 ночей
+                  .cost-item__value 5 х 9680 ₽
+                .cost-item__first 
+                  .cost-item__label
+                    .cost-item__mini В том числе НДС
+                  .cost-item__value 6342,39 ₽
+              .cost-item__middle 
+                .cost-total 
+                  .cost-total__name К оплате сейчас
+                  .cost-total__price 25 457 ₽
+                .cost-item__mini НДС входит в стоимость
+              .cost-item__bottom Из-за сложной эпидемиологической ситуации в мире при регистрации заезда может потребоваться справка, подтверждающая отрицательный результат теста на COVID-19, или сертификат о вакцинации.
