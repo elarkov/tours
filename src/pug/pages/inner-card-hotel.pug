@@ -1,0 +1,280 @@
+extends ../layout/main-inner
+
+block mainVariables
+  - pageTitle = 'Название отеля';
+
+block mainContent
+  main.main
+    section.inner 
+      .container.inner__container 
+        .breadcrumbs 
+          .breadcrumbs__item
+            a(href="#") Главная
+          .breadcrumbs__item.breadcrumbs__item--current 
+            a Отели Крыма
+        .inner-content 
+          .inner-content__card
+            .card-inner__top 
+              .hotel-top 
+                .hotel-top__right 
+                  .rating 
+                    img(src="img/star.png", alt="") 
+                    img(src="img/star.png", alt="") 
+                    img(src="img/star.png", alt="") 
+                    img(src="img/star.png", alt="") 
+                    img(src="img/star.png", alt="")
+                  p.hotel-top__title.hotel-top__title--card Название отеля
+                  .hotel-top__location 
+                    +icon('location', 'hotel-location')
+                    p.hotel-top__text Крым, Россия
+                  .card-places 
+                    p 2,9 км от центра  •  1,8 км от метро Дейвицка
+                    a(href="#") смотреть на карте 
+                .hotel-top__left 
+                  .price от 25 457 ₽
+                  button.hotel-top__button Показать цены
+              .card-main 
+                .card-gallery
+                  .card-gallery__big 
+                    img(src="img/card-inner.jpg", alt="")
+                  .card-gallery__views 
+                    .card-gallery__views-item 
+                      img(src="img/thumb-1.jpg", alt="")
+                    .card-gallery__views-item 
+                      img(src="img/thumb-2.jpg", alt="")
+                    .card-gallery__views-item 
+                      img(src="img/thumb-3.jpg", alt="")
+                .card-gallery__info 
+                  .tour-review.tour-review--card-inner
+                    .tour-review__block.tour-review__block--row 
+                      .tour-review__left
+                        .tour-review__num 9,3
+                        .tour-review__info 
+                          p.tour-review__info-label Превосходно
+                          p.tour-review__info-count 2 245 отзывов
+                      a.tour-review__button(href="#") Смотреть все отзывы
+                  .card-gallery__info-text Небольшой апарт-отель в центре Аланьи. Удобные апартаменты с аккуратной обстановкой, хороший набор услуг, до пляжа Клеопатра пара шагов. Для спокойного отдыха, подойдет для длительного размещения.
+                  .card-gallery__info-price 
+                    .price от 25 457 ₽
+                    button.hotel-top__button Показать цены
+                  .amenities
+                    p.amenities__title Главные удобства отеля
+                    ul.amenities-list 
+                      li.amenities-list__item
+                        +icon('sunset', 'icon-sunset')
+                        p 1.5 км до пляжа
+                      li.amenities-list__item
+                        +icon('baby', 'icon-baby')
+                        p Отдых с детьми
+                      li.amenities-list__item
+                        +icon('lover', 'icon-lover')
+                        p Идеально для совместного отдыха
+                      li.amenities-list__item
+                        +icon('conditions', 'icon-conditions')
+                        p Кондиционер
+                      li.amenities-list__item
+                        +icon('wifi', 'icon-wifi')
+                        p Wi-Fi
+                      li.amenities-list__item
+                        +icon('pool', 'icon-pool')
+                        p Бассейн
+            .card-inner__body 
+              .card-filter 
+                p.card-filter__title 5 ночей: 21 марта 2022 — 26 марта 2022, для 2 гостей
+                .card-filter__nav 
+                  .filter.filter--card 
+                    .filter__item.filter__item--card
+                      p.filter__title Кровати
+                      .filter__options 
+                        select.filter__select
+                          option(value="1") Все варианты
+                    .filter__item.filter__item--card
+                      p.filter__title Питание
+                      .filter__options 
+                        select.filter__select
+                          option(value="1") Все варианты
+                    .filter__item.filter__item--card
+                      p.filter__title Отмена
+                      .filter__options 
+                        select.filter__select
+                          option(value="1") Все варианты
+                  .card-filter__bottom 
+                    p 15 вариантов из 18 подходят под фильтры
+                    button(type="reset") Очистить
+                .filter-result 
+                  .filter-result__data
+                    .filter-result__name Стандартный номер
+                    .filter-result__text 2 отдельные кровати, завтрак, 2 взрослых
+                    .filter-result__gallery 
+                      .filter-result__gallery-item 
+                        img(src="img/thumb-2.jpg", alt="")
+                      .filter-result__gallery-item 
+                        img(src="img/thumb-2.jpg", alt="")
+                      .filter-result__gallery-item 
+                        img(src="img/thumb-2.jpg", alt="")
+                        p Еще 2 фото
+                        .filter-result__overlay 
+                  .filter-result__info 
+                    .filter-result__info-item 
+                      +icon('money-back', 'icon-money-back')
+                      p Бесплатная отмена до 20 марта
+                      img(src="img/info-gray.png", alt="")
+                    .filter-result__info-item 
+                      +icon('credit-card', 'icon-card')
+                      p Оплата сейчас
+                  .filter-result__price 
+                    .price.price--right от 25 457 ₽
+                    button.hotel-top__button Показать цены
+                .filter-list
+                  .filter-result 
+                    .filter-result__data
+                      .filter-result__name Стандартный номер
+                      .filter-result__text 2 отдельные кровати, завтрак, 2 взрослых
+                      .filter-result__gallery 
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                          p Еще 2 фото
+                          .filter-result__overlay 
+                    .filter-result__info 
+                      .filter-result__info-item 
+                        +icon('money-back', 'icon-money-back')
+                        p Бесплатная отмена до 20 марта
+                        img(src="img/info-gray.png", alt="")
+                      .filter-result__info-item 
+                        +icon('credit-card', 'icon-card')
+                        p Оплата сейчас
+                    .filter-result__price 
+                      .price.price--right от 25 457 ₽
+                      button.hotel-top__button Показать цены
+                  .filter-result 
+                    .filter-result__data
+                      .filter-result__name Стандартный номер
+                      .filter-result__text 2 отдельные кровати, завтрак, 2 взрослых
+                      .filter-result__gallery 
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                          p Еще 2 фото
+                          .filter-result__overlay 
+                    .filter-result__info 
+                      .filter-result__info-item 
+                        +icon('money-back', 'icon-money-back')
+                        p Бесплатная отмена до 20 марта
+                        img(src="img/info-gray.png", alt="")
+                      .filter-result__info-item 
+                        +icon('credit-card', 'icon-card')
+                        p Оплата сейчас
+                    .filter-result__price 
+                      .price.price--right от 25 457 ₽
+                      button.hotel-top__button Показать цены
+                  .filter-result 
+                    .filter-result__data
+                      .filter-result__name Стандартный номер
+                      .filter-result__text 2 отдельные кровати, завтрак, 2 взрослых
+                      .filter-result__gallery 
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                        .filter-result__gallery-item 
+                          img(src="img/thumb-2.jpg", alt="")
+                          p Еще 2 фото
+                          .filter-result__overlay 
+                    .filter-result__info 
+                      .filter-result__info-item 
+                        +icon('money-back', 'icon-money-back')
+                        p Бесплатная отмена до 20 марта
+                        img(src="img/info-gray.png", alt="")
+                      .filter-result__info-item 
+                        +icon('credit-card', 'icon-card')
+                        p Оплата сейчас
+                    .filter-result__price 
+                      .price.price--right от 25 457 ₽
+                      button.hotel-top__button Показать цены
+                .parametrs-list
+                  .filter-parametrs 
+                    .parametrs 
+                      p.parametrs__title Услуги и удобства
+                      ul 
+                        li Гладильные принадлежности (по запросу)
+                        li Камера хранения
+                        li Утюг
+                        li Химчистка
+                        li Телефон
+                    .parametrs 
+                      p.parametrs__title Развлечения
+                      ul 
+                        li Гладильные принадлежности (по запросу)
+                        li Камера хранения
+                        li Утюг
+                        li Химчистка
+                        li Телефон
+                    .parametrs 
+                      p.parametrs__title Питание
+                      ul 
+                        li Гладильные принадлежности (по запросу)
+                        li Камера хранения
+                        li Утюг
+                        li Химчистка
+                        li Телефон
+                    .parametrs 
+                      p.parametrs__title Красота и здоровье
+                      ul 
+                        li Гладильные принадлежности (по запросу)
+                        li Камера хранения
+                        li Утюг
+                        li Химчистка
+                        li Телефон
+                    .parametrs 
+                      p.parametrs__title Услуги для детей
+                      ul 
+                        li Гладильные принадлежности (по запросу)
+                        li Камера хранения
+                        li Утюг
+                        li Химчистка
+                        li Телефон
+                    .parametrs 
+                      p.parametrs__title В номерах
+                      ul 
+                        li Гладильные принадлежности (по запросу)
+                        li Камера хранения
+                        li Утюг
+                        li Химчистка
+                        li Телефон
+                  .map  
+                    p.map__title Отель на карте
+                    .map__container
+                      img(src="img/map.jpg", alt="")
+                  .card-review 
+                    h2.card-review__title Отзывы об отеле (35)
+                    ul.tour-testimonials 
+                      li.tour-testimonials__item 
+                        .tour-testimonials__top 
+                          p.tour-testimonials__name Андрей, август 2020
+                          .tour-rating 
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                          .tour-testimonials__award Оценка 4 из 5
+                        .tour-testimonials__text Тур пролетел,как один день. Эмоции зашкаливали,не ожидали с мужем, что до такой степени он будет активным,пригодились и треккинговые палки и сидушки и запасная обувь. Каждый день был заполнен до отказа новыми впечатлениями.Дмитрий энтузиаст своего дела,показал уникальные и красивые места,почувствовали единение с природой. Спасибо.
+                      li.tour-testimonials__item 
+                        .tour-testimonials__top 
+                          p.tour-testimonials__name Андреа, август 2022
+                          .tour-rating 
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                            img(src="img/star.png", alt="")
+                          .tour-testimonials__award Оценка 4 из 5
+                        .tour-testimonials__text Семья 3 человека (дочь 14 лет). Отдыхали с 10 по 23 октября 2020 года. Когда читала отзывы, думала будет намного хуже, и ещё были опасения, что отдых был в разгаре пандемии, но все оказалось более чем хорошо. Приехали в отель в 13 часов, сразу заселили на третий этаж. В номере чисто, не сказать что новое, но самое главное что чисто. Убирали через день. Полотенца меняли по запросу. За время нашего отдыха пару раз проводили дизенфекцию номера. В номере маленькая спальня с большой кроватью, в гостиной кухня с посудой, плиткой, стол, стулья, два дивана. Дочь спала на одном из них. До пляжа Клеопатра 5 минут не спеша. Дислокация отеля порадовала, множество различных магазинов. Читать полностью
+                    a.tour-testimonials__button(href="#") Показать еще

@@ -181,12 +181,28 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 10px;
+    @include md-block {
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+    }
   }
   &__award {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: #000000;
+    @include md-block {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  &__name {
+    @include md-block {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
   &__text {
     font-weight: 400;
@@ -210,6 +226,10 @@
     border-radius: 5px;
     color: #185C5C;
     border: 1px solid #185C5C;
+    @include md-block {
+      margin: 0;
+      margin-top: 35px;
+    }
   }
 }
 
@@ -323,4 +343,11 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.tour-review__block--row {
+  @include md-block {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
