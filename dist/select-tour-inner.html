@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Description of the page less than 150 characters">
     <title>Подбор тура внутренняя</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20220912180421">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220913154651">
   </head>
   <body> 
         <div class="overlay js-side-menu__overlay">
@@ -62,7 +62,7 @@
                 <div class="breadcrumbs__item"><a href="#">Главная</a></div>
                 <div class="breadcrumbs__item breadcrumbs__item--current"> <a>Отели Крыма</a></div>
               </div>
-              <div class="inner-content"> 
+              <div class="inner-content js-sticky"> 
                 <div class="inner-content__main"> 
                   <div class="tour-inner"> 
                     <h1 class="tour-inner__header">Активный тур "Осень, зима, весна" (Горная Адыгея и Кубань)</h1>
@@ -250,32 +250,34 @@
                   </div>
                 </div>
                 <aside class="inner-content__sidebar"> 
-                  <div class="select-date"> 
-                    <div class="select-date__top"> 
-                      <p class="select-date__top-text">Выберите дату</p>
-                      <div class="filter__options">
-                        <select class="filter__select"> 
-                          <option value="1">1-6 марта</option>
-                          <option value="2">7-13 марта</option>
-                          <option value="3">14-20 марта</option>
-                          <option value="4">20-26 марта</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="select-date__bottom"> 
-                      <div class="select-date__tange">12 из 18 мест осталось</div>
-                      <div class="select-date__count"> <span>Количество человек</span>
-                        <div class="qty">
-                          <button class="qty__btn qty__btn--minus">&minus;</button>
-                          <input type="number" name="qty" min="1" max="10" step="1" value="1">
-                          <button class="qty__btn qty__btn--plus">&plus; </button>
+                  <div class="sidebar-content js-sticky__item">
+                    <div class="select-date"> 
+                      <div class="select-date__top"> 
+                        <p class="select-date__top-text">Выберите дату</p>
+                        <div class="filter__options">
+                          <select class="filter__select"> 
+                            <option value="1">1-6 марта</option>
+                            <option value="2">7-13 марта</option>
+                            <option value="3">14-20 марта</option>
+                            <option value="4">20-26 марта</option>
+                          </select>
                         </div>
                       </div>
-                      <div class="select-date__price">25 457 ₽</div>
-                    </div>
-                    <div class="select-date__nav"> 
-                      <button class="select-date__button">Забронировать тур</button>
-                      <div class="select-date__mini">При отмене бронирования любого путешествия в течение 24 часов после оплаты вы получаете полный возврат.</div>
+                      <div class="select-date__bottom"> 
+                        <div class="select-date__tange">12 из 18 мест осталось</div>
+                        <div class="select-date__count"> <span>Количество человек</span>
+                          <div class="qty">
+                            <button class="qty__btn qty__btn--minus">&minus;</button>
+                            <input type="number" name="qty" min="1" max="10" step="1" value="1">
+                            <button class="qty__btn qty__btn--plus">&plus; </button>
+                          </div>
+                        </div>
+                        <div class="select-date__price">25 457 ₽</div>
+                      </div>
+                      <div class="select-date__nav"> 
+                        <button class="select-date__button">Забронировать тур</button>
+                        <div class="select-date__mini">При отмене бронирования любого путешествия в течение 24 часов после оплаты вы получаете полный возврат.</div>
+                      </div>
                     </div>
                   </div>
                 </aside>
@@ -353,5 +355,5 @@
           </div>
         </div>
   </body>
-  <script src="js/app.min.js?_v=20220912180421"> </script>
+  <script src="js/app.min.js?_v=20220913154651"> </script>
 </html>

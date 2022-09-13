@@ -107,6 +107,11 @@
   @include xl-block {
     padding-bottom: 30px;
   }
+  &--feedback {
+    max-width: 770px;
+    border-radius: 0;
+    background: transparent;
+  }
 }
 
 .guest-top {
@@ -126,6 +131,22 @@
       line-height: 30px;
     }
   }
+  &__subtitle {
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #050218;
+    @include md-block {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   &__rows {
     display: flex;
     flex-direction: column;
@@ -139,6 +160,23 @@
   &__row {
     @include xl-block {
       width: 328px;
+    }
+    &--textarea {
+      width: 100%;
+      max-width: 770px;
+      @include xl-block {
+        width: 100%;
+      }
+      textarea {
+        width: 100%;
+        
+        padding: 13px;
+        border: 1px solid #d2d2d2;
+        border-radius: 5px;
+        @include md-block {
+          height: 167px;
+        }
+      }
     }
   }
   &__label {
@@ -155,6 +193,9 @@
     padding: 13px;
     border: 1px solid #D2D2D2;
     border-radius: 5px;
+  }
+  &--feedback {
+    border-bottom: none;
   }
 }
 
@@ -189,6 +230,7 @@
 }
 
 .card-pay {
+  margin-bottom: 30px;
   @include xl-block {
     display: flex;
     align-items: flex-start;
@@ -225,11 +267,58 @@
     }
   }
 }
-
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  &__block {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    .svg-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.card-tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+  top: 26px;
+  transform: translate(-60%);
+  width: 270px;
+  background: #2D2D2D;
+  border-radius: 8px;
+  padding: 20px;
+  opacity: 0;
+  z-index: -1;
+  @include md-block {
+    transform: unset;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+  &--active {
+    opacity: 1;
+    z-index: 1;
+  }
+}
 .card-save {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   &__title {
     position: relative;
     padding-left: 25px;
@@ -284,7 +373,6 @@
 .booking-button {
   width: 270px;
   height: 50px;
-  margin-left: 10px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -339,6 +427,14 @@
     line-height: 22px;
     color: #000000;
   }
+  &--tours {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(118, 118, 118, 0.3);
+  }
 }
 
 .cost-total {
@@ -357,4 +453,58 @@
     line-height: 33px;
     color: #07151C;
   }
+  &--tours {
+    margin-bottom: 20px;
+  }
 }
+
+.select-birthday {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  &__item {
+    &--days {
+      width: 74px;
+      flex: 1 0 74px;
+    }
+    &--months,
+    &--years {
+      width: 91px;
+      flex: 1 0 91px;
+    }
+  }
+}
+
+.gender-select {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  &__row {
+    + .gender-select__row {
+      margin-top: 0;
+    }
+  }
+}
+
+.sidebar-fixed {
+  position: fixed;
+  top: 20px;
+}
+
+.score{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #050218;
+    @include md-block {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}
+

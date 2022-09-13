@@ -1,6 +1,10 @@
 .privacy {
-  font-weight: 500;
+  margin-top: 8px;
+  font-weight: 400;
   font-size: 12px;
-  line-height: 18px;
-  color: #FFFFFF;
+  line-height: 16px;
+  color: #000000;
+  @include md-block {
+    width: 328px;
+  }
 }

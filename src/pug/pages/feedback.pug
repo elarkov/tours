@@ -1,0 +1,42 @@
+extends ../layout/main-booking
+
+block mainVariables
+  - pageTitle = 'Оставить отзыв';
+
+block mainContent
+  main.main
+    section.inner 
+      .container.inner__container 
+        .inner-content
+          .inner-content__main.inner-content__main--long
+            .guest-contacts.guest-contacts--feedback 
+              .guest-top.guest-top--feedback
+                p.guest-top__title Обратная связь
+                p.guest-top__subtitle Опишите подробно свои впечатления о поездке
+                .guest-top__wrapper
+                  .guest-top__rows 
+                    .guest-top__row
+                      label.guest-top__label(for="name") Имя*
+                      input.guest-top__input(type="text" placeholder="Введите Ваше имя" name="client")
+                    .guest-top__row
+                      label.guest-top__label(for="email") Электронная почта*
+                      input.guest-top__input(type="email" placeholder="Введите email" name="email")
+                    .guest-top__row
+                      label.guest-top__label(for="phone") Дата поездки*
+                      input.guest-top__input(type="date" data-date="" data-date-format="DD MM YYYY" placeholder="Выберите дату поездки" name="date")
+                  .guest-top__rows 
+                    .guest-top__row.guest-top__row--textarea
+                      label.guest-top__label(for="phone") Текст отзыва*
+                      textarea(name="desc", cols="30", rows="10" placeholder="Расскажите о своей поездке") 
+              .guest-bottom 
+                .score 
+                  .score__text Oценка
+                  .rating 
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                    img(src="img/star.png", alt="")
+                button.booking-button Опубликовать отзыв
+                .privacy Нажимая «Завершить бронирование», Вы принимаете Правила бронирования.
+          

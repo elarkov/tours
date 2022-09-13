@@ -14,196 +14,197 @@ block mainContent
             a Отели Крыма
         .inner-content 
           aside.inner-content__sidebar 
-            .sidebar-map карта Здесь предствалены все варианты размещения из возможных по данному параметру на данные даты
-            .filter
-              .filter__item 
-                p.filter__title Название отеля
-                input.filter-input(type="text" placeholder="Например, Hilton")
-              .filter__item 
-                p.filter__title Сортировка
-                .filter__options
-                  select.filter__select(name="") 
-                    option(value="1") По популярности
-                    option(value="1") Сначала дешевые
-                    option(value="1") Сначала дорогие
-                    option(value="1") С высокой оценкой
-            .filter-select 
-              .filter-select__title Питание
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="food" value="Питание не включено")
-                  span.filter-select__name Питание не включено
-                .filter-select__count 56
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="food" value="Завтрак включен")
-                  span.filter-select__name Завтрак включен
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="food" value="Завтрак + обед или ужин")
-                  span.filter-select__name Завтрак + обед или ужин 
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="food" value="Завтрак, обед и ужин включены ")
-                  span.filter-select__name Завтрак, обед и ужин включены 
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="food" value="Все включено")
-                  span.filter-select__name Все включено
-                .filter-select__count 56
-            .filter-select 
-              .filter-select__title Количество звезд
-              .filter-select__row 
-                label.filter-select__label.filter-select__label--s1
-                  input.filter-select__input(type="radio" name="rating" value="5")
-                  span.filter-select__name.filter-select__name--star Питание не включено
-                .filter-select__count 56
-              .filter-select__row 
-                label.filter-select__label.filter-select__label--s2
-                  input.filter-select__input(type="radio" name="rating" value="4")
-                  span.filter-select__name.filter-select__name--star Завтрак включен
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label.filter-select__label--s3
-                  input.filter-select__input(type="radio" name="rating" value="3")
-                  span.filter-select__name.filter-select__name--star Завтрак + обед или ужин 
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label.filter-select__label--s4
-                  input.filter-select__input(type="radio" name="rating" value="2")
-                  span.filter-select__name.filter-select__name--star Завтрак, обед и ужин включены 
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label.filter-select__label--s5
-                  input.filter-select__input(type="radio" name="rating" value="1")
-                  span.filter-select__name.filter-select__name--star Все включено
-                .filter-select__count 56 
-            .filter-select 
-              .filter-select__title Тип размещения
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="building" value="Отели")
-                  span.filter-select__name Отели
-                .filter-select__count 56
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="building" value="Хостелы")
-                  span.filter-select__name Хостелы
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="building" value="Апартаменты")
-                  span.filter-select__name Апартаменты 
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="building" value="Коттеджи, виллы, бунгало")
-                  span.filter-select__name Коттеджи, виллы, бунгало 
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="building" value="Кемпинги")
-                  span.filter-select__name Кемпинги
-                .filter-select__count 56
-            .filter-select 
-              .filter-select__title Услуги и удобства
-              .filter-select__item
-                .filter-select__subtitle В отеле
+            .sidebar-content
+              .sidebar-map карта Здесь предствалены все варианты размещения из возможных по данному параметру на данные даты
+              .filter
+                .filter__item 
+                  p.filter__title Название отеля
+                  input.filter-input(type="text" placeholder="Например, Hilton")
+                .filter__item 
+                  p.filter__title Сортировка
+                  .filter__options
+                    select.filter__select(name="") 
+                      option(value="1") По популярности
+                      option(value="1") Сначала дешевые
+                      option(value="1") Сначала дорогие
+                      option(value="1") С высокой оценкой
+              .filter-select 
+                .filter-select__title Питание
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Бесплатный интернет")
-                    span.filter-select__name Бесплатный интернет
+                    input.filter-select__input(type="radio" name="food" value="Питание не включено")
+                    span.filter-select__name Питание не включено
                   .filter-select__count 56
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Трансфер")
-                    span.filter-select__name Трансфер
+                    input.filter-select__input(type="radio" name="food" value="Завтрак включен")
+                    span.filter-select__name Завтрак включен
                   .filter-select__count 56 
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Парковка")
-                    span.filter-select__name Парковка 
+                    input.filter-select__input(type="radio" name="food" value="Завтрак + обед или ужин")
+                    span.filter-select__name Завтрак + обед или ужин 
                   .filter-select__count 56 
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Бассейн")
-                    span.filter-select__name Бассейн 
+                    input.filter-select__input(type="radio" name="food" value="Завтрак, обед и ужин включены ")
+                    span.filter-select__name Завтрак, обед и ужин включены 
                   .filter-select__count 56 
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Фитнес")
-                    span.filter-select__name Фитнес
+                    input.filter-select__input(type="radio" name="food" value="Все включено")
+                    span.filter-select__name Все включено
+                  .filter-select__count 56
+              .filter-select 
+                .filter-select__title Количество звезд
+                .filter-select__row 
+                  label.filter-select__label.filter-select__label--s1
+                    input.filter-select__input(type="radio" name="rating" value="5")
+                    span.filter-select__name.filter-select__name--star Питание не включено
+                  .filter-select__count 56
+                .filter-select__row 
+                  label.filter-select__label.filter-select__label--s2
+                    input.filter-select__input(type="radio" name="rating" value="4")
+                    span.filter-select__name.filter-select__name--star Завтрак включен
+                  .filter-select__count 56 
+                .filter-select__row 
+                  label.filter-select__label.filter-select__label--s3
+                    input.filter-select__input(type="radio" name="rating" value="3")
+                    span.filter-select__name.filter-select__name--star Завтрак + обед или ужин 
+                  .filter-select__count 56 
+                .filter-select__row 
+                  label.filter-select__label.filter-select__label--s4
+                    input.filter-select__input(type="radio" name="rating" value="2")
+                    span.filter-select__name.filter-select__name--star Завтрак, обед и ужин включены 
+                  .filter-select__count 56 
+                .filter-select__row 
+                  label.filter-select__label.filter-select__label--s5
+                    input.filter-select__input(type="radio" name="rating" value="1")
+                    span.filter-select__name.filter-select__name--star Все включено
+                  .filter-select__count 56 
+              .filter-select 
+                .filter-select__title Тип размещения
+                .filter-select__row 
+                  label.filter-select__label
+                    input.filter-select__input(type="radio" name="building" value="Отели")
+                    span.filter-select__name Отели
                   .filter-select__count 56
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Бар")
-                    span.filter-select__name Бар
-                  .filter-select__count 56
-                .filter-select__row 
-                  label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Пляж рядом")
-                    span.filter-select__name Пляж рядом
-                  .filter-select__count 56
-                .filter-select__row 
-                  label.filter-select__label
-                    input.filter-select__input(type="radio" name="building" value="Горнолыжный склон рядом")
-                    span.filter-select__name Горнолыжный склон рядом
-                  .filter-select__count 56
-              .filter-select__item
-                .filter-select__subtitle В номере
-                .filter-select__row 
-                  label.filter-select__label
-                    input.filter-select__input(type="radio" name="room" value="Кондиционер")
-                    span.filter-select__name Кондиционер
-                  .filter-select__count 56
-                .filter-select__row 
-                  label.filter-select__label
-                    input.filter-select__input(type="radio" name="room" value="Ванная комната в номере")
-                    span.filter-select__name Ванная комната в номере
+                    input.filter-select__input(type="radio" name="building" value="Хостелы")
+                    span.filter-select__name Хостелы
                   .filter-select__count 56 
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="room" value="Окно в номере")
-                    span.filter-select__name Окно в номере 
+                    input.filter-select__input(type="radio" name="building" value="Апартаменты")
+                    span.filter-select__name Апартаменты 
                   .filter-select__count 56 
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="room" value="Кухня")
-                    span.filter-select__name Кухня
+                    input.filter-select__input(type="radio" name="building" value="Коттеджи, виллы, бунгало")
+                    span.filter-select__name Коттеджи, виллы, бунгало 
                   .filter-select__count 56 
                 .filter-select__row 
                   label.filter-select__label
-                    input.filter-select__input(type="radio" name="room" value="Балкон")
-                    span.filter-select__name Балкон
+                    input.filter-select__input(type="radio" name="building" value="Кемпинги")
+                    span.filter-select__name Кемпинги
                   .filter-select__count 56
-            .filter-select 
-              .filter-select__title Вид из окна
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="view" value="На море")
-                  span.filter-select__name На море
-                .filter-select__count 56
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="view" value="На горы")
-                  span.filter-select__name На горы
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="view" value="На реку/озеро")
-                  span.filter-select__name На реку/озеро
-                .filter-select__count 56 
-              .filter-select__row 
-                label.filter-select__label
-                  input.filter-select__input(type="radio" name="view" value="На город")
-                  span.filter-select__name На город 
-                .filter-select__count 56 
-            .filter-bottom 
-              button.filter-bottom__reset(type="reset") Очистить
-              button.filter-bottom__apply(type="submit") Применить фильтры
+              .filter-select 
+                .filter-select__title Услуги и удобства
+                .filter-select__item
+                  .filter-select__subtitle В отеле
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Бесплатный интернет")
+                      span.filter-select__name Бесплатный интернет
+                    .filter-select__count 56
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Трансфер")
+                      span.filter-select__name Трансфер
+                    .filter-select__count 56 
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Парковка")
+                      span.filter-select__name Парковка 
+                    .filter-select__count 56 
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Бассейн")
+                      span.filter-select__name Бассейн 
+                    .filter-select__count 56 
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Фитнес")
+                      span.filter-select__name Фитнес
+                    .filter-select__count 56
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Бар")
+                      span.filter-select__name Бар
+                    .filter-select__count 56
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Пляж рядом")
+                      span.filter-select__name Пляж рядом
+                    .filter-select__count 56
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="building" value="Горнолыжный склон рядом")
+                      span.filter-select__name Горнолыжный склон рядом
+                    .filter-select__count 56
+                .filter-select__item
+                  .filter-select__subtitle В номере
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="room" value="Кондиционер")
+                      span.filter-select__name Кондиционер
+                    .filter-select__count 56
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="room" value="Ванная комната в номере")
+                      span.filter-select__name Ванная комната в номере
+                    .filter-select__count 56 
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="room" value="Окно в номере")
+                      span.filter-select__name Окно в номере 
+                    .filter-select__count 56 
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="room" value="Кухня")
+                      span.filter-select__name Кухня
+                    .filter-select__count 56 
+                  .filter-select__row 
+                    label.filter-select__label
+                      input.filter-select__input(type="radio" name="room" value="Балкон")
+                      span.filter-select__name Балкон
+                    .filter-select__count 56
+              .filter-select 
+                .filter-select__title Вид из окна
+                .filter-select__row 
+                  label.filter-select__label
+                    input.filter-select__input(type="radio" name="view" value="На море")
+                    span.filter-select__name На море
+                  .filter-select__count 56
+                .filter-select__row 
+                  label.filter-select__label
+                    input.filter-select__input(type="radio" name="view" value="На горы")
+                    span.filter-select__name На горы
+                  .filter-select__count 56 
+                .filter-select__row 
+                  label.filter-select__label
+                    input.filter-select__input(type="radio" name="view" value="На реку/озеро")
+                    span.filter-select__name На реку/озеро
+                  .filter-select__count 56 
+                .filter-select__row 
+                  label.filter-select__label
+                    input.filter-select__input(type="radio" name="view" value="На город")
+                    span.filter-select__name На город 
+                  .filter-select__count 56 
+              .filter-bottom 
+                button.filter-bottom__reset(type="reset") Очистить
+                button.filter-bottom__apply(type="submit") Применить фильтры
           .inner-content__main 
             p.inner-content__header Крым: доступно 427 из 2696 отелей
             ul.card-hotel 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Description of the page less than 150 characters">
     <title>Подбор отеля</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20220912180421">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220913154651">
   </head>
   <body> 
         <div class="overlay js-side-menu__overlay">
@@ -80,240 +80,242 @@
               </div>
               <div class="inner-content"> 
                 <aside class="inner-content__sidebar"> 
-                  <div class="sidebar-map">карта Здесь предствалены все варианты размещения из возможных по данному параметру на данные даты</div>
-                  <div class="filter">
-                    <div class="filter__item"> 
-                      <p class="filter__title">Название отеля</p>
-                      <input class="filter-input" type="text" placeholder="Например, Hilton">
-                    </div>
-                    <div class="filter__item"> 
-                      <p class="filter__title">Сортировка</p>
-                      <div class="filter__options">
-                        <select class="filter__select" name=""> 
-                          <option value="1">По популярности</option>
-                          <option value="1">Сначала дешевые</option>
-                          <option value="1">Сначала дорогие</option>
-                          <option value="1">С высокой оценкой</option>
-                        </select>
+                  <div class="sidebar-content">
+                    <div class="sidebar-map">карта Здесь предствалены все варианты размещения из возможных по данному параметру на данные даты</div>
+                    <div class="filter">
+                      <div class="filter__item"> 
+                        <p class="filter__title">Название отеля</p>
+                        <input class="filter-input" type="text" placeholder="Например, Hilton">
+                      </div>
+                      <div class="filter__item"> 
+                        <p class="filter__title">Сортировка</p>
+                        <div class="filter__options">
+                          <select class="filter__select" name=""> 
+                            <option value="1">По популярности</option>
+                            <option value="1">Сначала дешевые</option>
+                            <option value="1">Сначала дорогие</option>
+                            <option value="1">С высокой оценкой</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="filter-select"> 
-                    <div class="filter-select__title">Питание</div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="food" value="Питание не включено"><span class="filter-select__name">Питание не включено</span>
-                      </label>
-                      <div class="filter-select__count">56</div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="food" value="Завтрак включен"><span class="filter-select__name">Завтрак включен</span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="food" value="Завтрак + обед или ужин"><span class="filter-select__name">Завтрак + обед или ужин </span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="food" value="Завтрак, обед и ужин включены "><span class="filter-select__name">Завтрак, обед и ужин включены </span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="food" value="Все включено"><span class="filter-select__name">Все включено</span>
-                      </label>
-                      <div class="filter-select__count">56</div>
-                    </div>
-                  </div>
-                  <div class="filter-select"> 
-                    <div class="filter-select__title">Количество звезд</div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label filter-select__label--s1">
-                        <input class="filter-select__input" type="radio" name="rating" value="5"><span class="filter-select__name filter-select__name--star">Питание не включено</span>
-                      </label>
-                      <div class="filter-select__count">56</div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label filter-select__label--s2">
-                        <input class="filter-select__input" type="radio" name="rating" value="4"><span class="filter-select__name filter-select__name--star">Завтрак включен</span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label filter-select__label--s3">
-                        <input class="filter-select__input" type="radio" name="rating" value="3"><span class="filter-select__name filter-select__name--star">Завтрак + обед или ужин </span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label filter-select__label--s4">
-                        <input class="filter-select__input" type="radio" name="rating" value="2"><span class="filter-select__name filter-select__name--star">Завтрак, обед и ужин включены </span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label filter-select__label--s5">
-                        <input class="filter-select__input" type="radio" name="rating" value="1"><span class="filter-select__name filter-select__name--star">Все включено</span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                  </div>
-                  <div class="filter-select"> 
-                    <div class="filter-select__title">Тип размещения</div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="building" value="Отели"><span class="filter-select__name">Отели</span>
-                      </label>
-                      <div class="filter-select__count">56</div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="building" value="Хостелы"><span class="filter-select__name">Хостелы</span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="building" value="Апартаменты"><span class="filter-select__name">Апартаменты </span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="building" value="Коттеджи, виллы, бунгало"><span class="filter-select__name">Коттеджи, виллы, бунгало </span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="building" value="Кемпинги"><span class="filter-select__name">Кемпинги</span>
-                      </label>
-                      <div class="filter-select__count">56</div>
-                    </div>
-                  </div>
-                  <div class="filter-select"> 
-                    <div class="filter-select__title">Услуги и удобства</div>
-                    <div class="filter-select__item">
-                      <div class="filter-select__subtitle">В отеле</div>
+                    <div class="filter-select"> 
+                      <div class="filter-select__title">Питание</div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Бесплатный интернет"><span class="filter-select__name">Бесплатный интернет</span>
+                          <input class="filter-select__input" type="radio" name="food" value="Питание не включено"><span class="filter-select__name">Питание не включено</span>
                         </label>
                         <div class="filter-select__count">56</div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Трансфер"><span class="filter-select__name">Трансфер</span>
+                          <input class="filter-select__input" type="radio" name="food" value="Завтрак включен"><span class="filter-select__name">Завтрак включен</span>
                         </label>
                         <div class="filter-select__count">56 </div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Парковка"><span class="filter-select__name">Парковка </span>
+                          <input class="filter-select__input" type="radio" name="food" value="Завтрак + обед или ужин"><span class="filter-select__name">Завтрак + обед или ужин </span>
                         </label>
                         <div class="filter-select__count">56 </div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Бассейн"><span class="filter-select__name">Бассейн </span>
+                          <input class="filter-select__input" type="radio" name="food" value="Завтрак, обед и ужин включены "><span class="filter-select__name">Завтрак, обед и ужин включены </span>
                         </label>
                         <div class="filter-select__count">56 </div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Фитнес"><span class="filter-select__name">Фитнес</span>
-                        </label>
-                        <div class="filter-select__count">56</div>
-                      </div>
-                      <div class="filter-select__row"> 
-                        <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Бар"><span class="filter-select__name">Бар</span>
-                        </label>
-                        <div class="filter-select__count">56</div>
-                      </div>
-                      <div class="filter-select__row"> 
-                        <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Пляж рядом"><span class="filter-select__name">Пляж рядом</span>
-                        </label>
-                        <div class="filter-select__count">56</div>
-                      </div>
-                      <div class="filter-select__row"> 
-                        <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="building" value="Горнолыжный склон рядом"><span class="filter-select__name">Горнолыжный склон рядом</span>
+                          <input class="filter-select__input" type="radio" name="food" value="Все включено"><span class="filter-select__name">Все включено</span>
                         </label>
                         <div class="filter-select__count">56</div>
                       </div>
                     </div>
-                    <div class="filter-select__item">
-                      <div class="filter-select__subtitle">В номере</div>
+                    <div class="filter-select"> 
+                      <div class="filter-select__title">Количество звезд</div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label filter-select__label--s1">
+                          <input class="filter-select__input" type="radio" name="rating" value="5"><span class="filter-select__name filter-select__name--star">Питание не включено</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label filter-select__label--s2">
+                          <input class="filter-select__input" type="radio" name="rating" value="4"><span class="filter-select__name filter-select__name--star">Завтрак включен</span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label filter-select__label--s3">
+                          <input class="filter-select__input" type="radio" name="rating" value="3"><span class="filter-select__name filter-select__name--star">Завтрак + обед или ужин </span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label filter-select__label--s4">
+                          <input class="filter-select__input" type="radio" name="rating" value="2"><span class="filter-select__name filter-select__name--star">Завтрак, обед и ужин включены </span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label filter-select__label--s5">
+                          <input class="filter-select__input" type="radio" name="rating" value="1"><span class="filter-select__name filter-select__name--star">Все включено</span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                    </div>
+                    <div class="filter-select"> 
+                      <div class="filter-select__title">Тип размещения</div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="room" value="Кондиционер"><span class="filter-select__name">Кондиционер</span>
+                          <input class="filter-select__input" type="radio" name="building" value="Отели"><span class="filter-select__name">Отели</span>
                         </label>
                         <div class="filter-select__count">56</div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="room" value="Ванная комната в номере"><span class="filter-select__name">Ванная комната в номере</span>
+                          <input class="filter-select__input" type="radio" name="building" value="Хостелы"><span class="filter-select__name">Хостелы</span>
                         </label>
                         <div class="filter-select__count">56 </div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="room" value="Окно в номере"><span class="filter-select__name">Окно в номере </span>
+                          <input class="filter-select__input" type="radio" name="building" value="Апартаменты"><span class="filter-select__name">Апартаменты </span>
                         </label>
                         <div class="filter-select__count">56 </div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="room" value="Кухня"><span class="filter-select__name">Кухня</span>
+                          <input class="filter-select__input" type="radio" name="building" value="Коттеджи, виллы, бунгало"><span class="filter-select__name">Коттеджи, виллы, бунгало </span>
                         </label>
                         <div class="filter-select__count">56 </div>
                       </div>
                       <div class="filter-select__row"> 
                         <label class="filter-select__label">
-                          <input class="filter-select__input" type="radio" name="room" value="Балкон"><span class="filter-select__name">Балкон</span>
+                          <input class="filter-select__input" type="radio" name="building" value="Кемпинги"><span class="filter-select__name">Кемпинги</span>
                         </label>
                         <div class="filter-select__count">56</div>
                       </div>
                     </div>
-                  </div>
-                  <div class="filter-select"> 
-                    <div class="filter-select__title">Вид из окна</div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="view" value="На море"><span class="filter-select__name">На море</span>
-                      </label>
-                      <div class="filter-select__count">56</div>
+                    <div class="filter-select"> 
+                      <div class="filter-select__title">Услуги и удобства</div>
+                      <div class="filter-select__item">
+                        <div class="filter-select__subtitle">В отеле</div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Бесплатный интернет"><span class="filter-select__name">Бесплатный интернет</span>
+                          </label>
+                          <div class="filter-select__count">56</div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Трансфер"><span class="filter-select__name">Трансфер</span>
+                          </label>
+                          <div class="filter-select__count">56 </div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Парковка"><span class="filter-select__name">Парковка </span>
+                          </label>
+                          <div class="filter-select__count">56 </div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Бассейн"><span class="filter-select__name">Бассейн </span>
+                          </label>
+                          <div class="filter-select__count">56 </div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Фитнес"><span class="filter-select__name">Фитнес</span>
+                          </label>
+                          <div class="filter-select__count">56</div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Бар"><span class="filter-select__name">Бар</span>
+                          </label>
+                          <div class="filter-select__count">56</div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Пляж рядом"><span class="filter-select__name">Пляж рядом</span>
+                          </label>
+                          <div class="filter-select__count">56</div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="building" value="Горнолыжный склон рядом"><span class="filter-select__name">Горнолыжный склон рядом</span>
+                          </label>
+                          <div class="filter-select__count">56</div>
+                        </div>
+                      </div>
+                      <div class="filter-select__item">
+                        <div class="filter-select__subtitle">В номере</div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="room" value="Кондиционер"><span class="filter-select__name">Кондиционер</span>
+                          </label>
+                          <div class="filter-select__count">56</div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="room" value="Ванная комната в номере"><span class="filter-select__name">Ванная комната в номере</span>
+                          </label>
+                          <div class="filter-select__count">56 </div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="room" value="Окно в номере"><span class="filter-select__name">Окно в номере </span>
+                          </label>
+                          <div class="filter-select__count">56 </div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="room" value="Кухня"><span class="filter-select__name">Кухня</span>
+                          </label>
+                          <div class="filter-select__count">56 </div>
+                        </div>
+                        <div class="filter-select__row"> 
+                          <label class="filter-select__label">
+                            <input class="filter-select__input" type="radio" name="room" value="Балкон"><span class="filter-select__name">Балкон</span>
+                          </label>
+                          <div class="filter-select__count">56</div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="view" value="На горы"><span class="filter-select__name">На горы</span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
+                    <div class="filter-select"> 
+                      <div class="filter-select__title">Вид из окна</div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="view" value="На море"><span class="filter-select__name">На море</span>
+                        </label>
+                        <div class="filter-select__count">56</div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="view" value="На горы"><span class="filter-select__name">На горы</span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="view" value="На реку/озеро"><span class="filter-select__name">На реку/озеро</span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
+                      <div class="filter-select__row"> 
+                        <label class="filter-select__label">
+                          <input class="filter-select__input" type="radio" name="view" value="На город"><span class="filter-select__name">На город </span>
+                        </label>
+                        <div class="filter-select__count">56 </div>
+                      </div>
                     </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="view" value="На реку/озеро"><span class="filter-select__name">На реку/озеро</span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
+                    <div class="filter-bottom"> 
+                      <button class="filter-bottom__reset" type="reset">Очистить</button>
+                      <button class="filter-bottom__apply" type="submit">Применить фильтры</button>
                     </div>
-                    <div class="filter-select__row"> 
-                      <label class="filter-select__label">
-                        <input class="filter-select__input" type="radio" name="view" value="На город"><span class="filter-select__name">На город </span>
-                      </label>
-                      <div class="filter-select__count">56 </div>
-                    </div>
-                  </div>
-                  <div class="filter-bottom"> 
-                    <button class="filter-bottom__reset" type="reset">Очистить</button>
-                    <button class="filter-bottom__apply" type="submit">Применить фильтры</button>
                   </div>
                 </aside>
                 <div class="inner-content__main"> 
@@ -537,5 +539,5 @@
           </div>
         </div>
   </body>
-  <script src="js/app.min.js?_v=20220912180421"> </script>
+  <script src="js/app.min.js?_v=20220913154651"> </script>
 </html>

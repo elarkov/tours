@@ -306,6 +306,21 @@
     color: #07151C;
     text-align: center;
   }
+  &__total-days {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #747474;
+  }
+  &__duration {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+  }
+  &__day {
+    color: #747474;
+  }
 }
 
 .qty {

@@ -1,7 +1,7 @@
 extends ../layout/main-booking
 
 block mainVariables
-  - pageTitle = 'Бронирование отеля';
+  - pageTitle = 'Бронирование тура';
 
 block mainContent
   main.main
@@ -11,41 +11,16 @@ block mainContent
           .breadcrumbs__item
             a(href="#") Главная
           .breadcrumbs__item
-            a(href="#") Отель крыма
+            a(href="#") Туры крыма
           .breadcrumbs__item
-            a(href="#") Отель
+            a(href="#") Название тура
           .breadcrumbs__item.breadcrumbs__item--current 
             a Бронирование
         .inner-content.js-sticky
           .inner-content__main
-            .booking-card 
-              .booking-card__img 
-                img(src="img/card.jpg", alt="")
-              .booking-card__body 
-                .booking-rating 
-                  .booking-rating__stars 
-                    img(src="img/star.png", alt="")
-                    img(src="img/star.png", alt="")
-                    img(src="img/star.png", alt="")
-                    img(src="img/star.png", alt="")
-                    img(src="img/star.png", alt="")
-                  .booking-rating__name Название отеля
-                .card-location
-                  +icon('location', 'tour-location')
-                  .card-location__text Локация
-                .booking-info 
-                  .booking-info__name Стандартный номер
-                  .booking-info__text 2 отдельные кровати, завтрак, 2 взрослых
-              .booking-times 
-                .booking-times__item 
-                  p.booking-times__label Заезд с 14:00
-                  p.booking-times__date 21 мар 2022
-                .booking-times__item 
-                  p.booking-times__label Выезд до 11:00
-                  p.booking-times__date 26 мар 2022
             .guest-contacts 
               .guest-top
-                p.guest-top__title Контактные данные гостя
+                p.guest-top__title Контактные данные путешественника
                 .guest-top__rows 
                   .guest-top__row
                     label.guest-top__label(for="name") Имя*
@@ -60,12 +35,27 @@ block mainContent
                     label.guest-top__label(for="phone") Телефон для связи*
                     input.guest-top__input(type="tel" placeholder="+79298765465" name="phone")
                   .guest-top__row
-                    label.guest-top__label Гражданство*
-                    .filter__options 
-                      select.filter__select
-                        option(value="1") Российская Федерация
-                        option(value="1") Бермуды
-                        option(value="1") Китай
+                    label.guest-top__label День рождения*
+                    .select-birthday
+                      .filter__options.select-birthday__item.select-birthday__item--days
+                        select.select-birthday__select.filter__select(id="day" name="dd")
+                      .filter__options.select-birthday__item.select-birthday__item--months
+                        select.select-birthday__select.filter__select(id="month" name="mm" onchange="change_month(this)")
+                      .filter__options.select-birthday__item.select-birthday__item--years
+                        select.select-birthday__select.filter__select(id="year" name="yyyy" onchange="change_year(this)")
+                  .guest-top__row 
+                    label.guest-top__label Пол*
+                    .gender-select.filter-select 
+                      .filter-select__row.gender-select__row 
+                        label.filter-select__label
+                          input.filter-select__input(type="radio" name="gender" value="Женский" checked)
+                          span.filter-select__name Женский
+                      .filter-select__row.gender-select__row  
+                        label.filter-select__label
+                          input.filter-select__input(type="radio" name="gender" value="Мужской")
+                          span.filter-select__name Мужской
+                        
+
               .guest-bottom 
                 .guest-bottom__title Оплата кредитной или дебетовой картой
                 p.guest-bottom__text Как только вы нажмёте «Завершить бронирование», с вашей карты будет списана полная стоимость проживания.
@@ -102,22 +92,37 @@ block mainContent
                       img(src="img/ymoney.png", alt="")
                 button.booking-button Завершить бронирование
                 .privacy Нажимая «Завершить бронирование», Вы принимаете Правила бронирования.
-          aside.inner-content__sidebar 
-            .sidebar-content.js-sticky__item
-              .cost-item 
-                .cost-item__top 
+          aside.inner-content__sidebar
+            .sidebar-content.js-sticky__item 
+              .select-date 
+                .select-date__top 
+                  p.select-date__top-text Активный тур "Осень, зима, весна" (Горная Адыгея и Кубань)
+                  p.select-date__total-days 7 дней
+                  p.select-date__duration Старт: <span class="select-date__day">20 марта 2022 (Воскресенье)</span>
+                  p.select-date__duration Финиш: <span class="select-date__day">26 марта 2022 (Суббота)</span>
+                  .filter__options
+                    select.filter__select 
+                      option(value="1") 1-6 марта
+                      option(value="2") 7-13 марта
+                      option(value="3") 14-20 марта
+                      option(value="4") 20-26 марта
+                .select-date__bottom 
+                  .select-date__count 
+                    span Количество участников
+                    .qty
+                      button.qty__btn.qty__btn--minus &minus;
+                      input(type="number" name="qty" min="1" max="10" step="1" value="1")
+                      button.qty__btn.qty__btn--plus &plus; 
+                .cost-item.cost-item--tours
                   .cost-item__first
                     .cost-item__label
-                      .cost-item__name Стоимость номера
-                      .cost-item__mini для 2 взрослых на 5 ночей
-                    .cost-item__value 5 х 9680 ₽
-                  .cost-item__first 
+                      .cost-item__name К оплате сейчас
+                      .cost-item__mini 26 000 ₽ х 1 
+                    .cost-item__value 26 000 ₽
+                  .cost-item__first
                     .cost-item__label
-                      .cost-item__mini В том числе НДС
-                    .cost-item__value 6342,39 ₽
-                .cost-item__middle 
-                  .cost-total 
-                    .cost-total__name К оплате сейчас
-                    .cost-total__price 25 457 ₽
-                  .cost-item__mini НДС входит в стоимость
-                .cost-item__bottom Из-за сложной эпидемиологической ситуации в мире при регистрации заезда может потребоваться справка, подтверждающая отрицательный результат теста на COVID-19, или сертификат о вакцинации.
+                      .cost-item__name Комиссия сервиса
+                    .cost-item__value 500 ₽
+                .cost-total
+                  .cost-total__text Итого
+                  .cost-total__price 25 457 ₽

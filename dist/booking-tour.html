@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Description of the page less than 150 characters">
-    <title>Бронирование отеля</title>
+    <title>Бронирование тура</title>
     <link rel="stylesheet" href="css/style.min.css?_v=20220913154651">
   </head>
   <body> 
@@ -59,44 +59,15 @@
             <div class="container inner__container"> 
               <div class="breadcrumbs"> 
                 <div class="breadcrumbs__item"><a href="#">Главная</a></div>
-                <div class="breadcrumbs__item"><a href="#">Отель крыма</a></div>
-                <div class="breadcrumbs__item"><a href="#">Отель</a></div>
+                <div class="breadcrumbs__item"><a href="#">Туры крыма</a></div>
+                <div class="breadcrumbs__item"><a href="#">Название тура</a></div>
                 <div class="breadcrumbs__item breadcrumbs__item--current"> <a>Бронирование</a></div>
               </div>
               <div class="inner-content js-sticky">
                 <div class="inner-content__main">
-                  <div class="booking-card"> 
-                    <div class="booking-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="booking-card__body"> 
-                      <div class="booking-rating"> 
-                        <div class="booking-rating__stars"> <picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><picture><source srcset="img/star.webp" type="image/webp"><img src="img/star.png" alt=""></picture></picture></picture></picture></picture><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""><img src="img/star.png" alt=""></div>
-                        <div class="booking-rating__name">Название отеля</div>
-                      </div>
-                      <div class="card-location">
-                            <svg class="svg-icon tour-location">
-                              <use xlink:href="img/sprite.svg#location"></use>
-                            </svg>
-                        <div class="card-location__text">Локация</div>
-                      </div>
-                      <div class="booking-info"> 
-                        <div class="booking-info__name">Стандартный номер</div>
-                        <div class="booking-info__text">2 отдельные кровати, завтрак, 2 взрослых</div>
-                      </div>
-                    </div>
-                    <div class="booking-times"> 
-                      <div class="booking-times__item"> 
-                        <p class="booking-times__label">Заезд с 14:00</p>
-                        <p class="booking-times__date">21 мар 2022</p>
-                      </div>
-                      <div class="booking-times__item"> 
-                        <p class="booking-times__label">Выезд до 11:00</p>
-                        <p class="booking-times__date">26 мар 2022</p>
-                      </div>
-                    </div>
-                  </div>
                   <div class="guest-contacts"> 
                     <div class="guest-top">
-                      <p class="guest-top__title">Контактные данные гостя</p>
+                      <p class="guest-top__title">Контактные данные путешественника</p>
                       <div class="guest-top__rows"> 
                         <div class="guest-top__row">
                           <label class="guest-top__label" for="name">Имя*</label>
@@ -115,13 +86,32 @@
                           <input class="guest-top__input" type="tel" placeholder="+79298765465" name="phone">
                         </div>
                         <div class="guest-top__row">
-                          <label class="guest-top__label">Гражданство*</label>
-                          <div class="filter__options"> 
-                            <select class="filter__select">
-                              <option value="1">Российская Федерация</option>
-                              <option value="1">Бермуды</option>
-                              <option value="1">Китай</option>
-                            </select>
+                          <label class="guest-top__label">День рождения*</label>
+                          <div class="select-birthday">
+                            <div class="filter__options select-birthday__item select-birthday__item--days">
+                              <select class="select-birthday__select filter__select" id="day" name="dd"></select>
+                            </div>
+                            <div class="filter__options select-birthday__item select-birthday__item--months">
+                              <select class="select-birthday__select filter__select" id="month" name="mm" onchange="change_month(this)"></select>
+                            </div>
+                            <div class="filter__options select-birthday__item select-birthday__item--years">
+                              <select class="select-birthday__select filter__select" id="year" name="yyyy" onchange="change_year(this)"></select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="guest-top__row"> 
+                          <label class="guest-top__label">Пол*</label>
+                          <div class="gender-select filter-select"> 
+                            <div class="filter-select__row gender-select__row"> 
+                              <label class="filter-select__label">
+                                <input class="filter-select__input" type="radio" name="gender" value="Женский" checked><span class="filter-select__name">Женский</span>
+                              </label>
+                            </div>
+                            <div class="filter-select__row gender-select__row"> 
+                              <label class="filter-select__label">
+                                <input class="filter-select__input" type="radio" name="gender" value="Мужской"><span class="filter-select__name">Мужской</span>
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -174,32 +164,51 @@
                     </div>
                   </div>
                 </div>
-                <aside class="inner-content__sidebar"> 
-                  <div class="sidebar-content js-sticky__item">
-                    <div class="cost-item"> 
-                      <div class="cost-item__top"> 
+                <aside class="inner-content__sidebar">
+                  <div class="sidebar-content js-sticky__item"> 
+                    <div class="select-date"> 
+                      <div class="select-date__top"> 
+                        <p class="select-date__top-text">Активный тур "Осень, зима, весна" (Горная Адыгея и Кубань)</p>
+                        <p class="select-date__total-days">7 дней</p>
+                        <p class="select-date__duration">Старт: <span class="select-date__day">20 марта 2022 (Воскресенье)</span></p>
+                        <p class="select-date__duration">Финиш: <span class="select-date__day">26 марта 2022 (Суббота)</span></p>
+                        <div class="filter__options">
+                          <select class="filter__select"> 
+                            <option value="1">1-6 марта</option>
+                            <option value="2">7-13 марта</option>
+                            <option value="3">14-20 марта</option>
+                            <option value="4">20-26 марта</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="select-date__bottom"> 
+                        <div class="select-date__count"> <span>Количество участников</span>
+                          <div class="qty">
+                            <button class="qty__btn qty__btn--minus">&minus;</button>
+                            <input type="number" name="qty" min="1" max="10" step="1" value="1">
+                            <button class="qty__btn qty__btn--plus">&plus; </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cost-item cost-item--tours">
                         <div class="cost-item__first">
                           <div class="cost-item__label">
-                            <div class="cost-item__name">Стоимость номера</div>
-                            <div class="cost-item__mini">для 2 взрослых на 5 ночей</div>
+                            <div class="cost-item__name">К оплате сейчас</div>
+                            <div class="cost-item__mini">26 000 ₽ х 1 </div>
                           </div>
-                          <div class="cost-item__value">5 х 9680 ₽</div>
+                          <div class="cost-item__value">26 000 ₽</div>
                         </div>
-                        <div class="cost-item__first"> 
+                        <div class="cost-item__first">
                           <div class="cost-item__label">
-                            <div class="cost-item__mini">В том числе НДС</div>
+                            <div class="cost-item__name">Комиссия сервиса</div>
                           </div>
-                          <div class="cost-item__value">6342,39 ₽</div>
+                          <div class="cost-item__value">500 ₽</div>
                         </div>
                       </div>
-                      <div class="cost-item__middle"> 
-                        <div class="cost-total"> 
-                          <div class="cost-total__name">К оплате сейчас</div>
-                          <div class="cost-total__price">25 457 ₽</div>
-                        </div>
-                        <div class="cost-item__mini">НДС входит в стоимость</div>
+                      <div class="cost-total">
+                        <div class="cost-total__text">Итого</div>
+                        <div class="cost-total__price">25 457 ₽</div>
                       </div>
-                      <div class="cost-item__bottom">Из-за сложной эпидемиологической ситуации в мире при регистрации заезда может потребоваться справка, подтверждающая отрицательный результат теста на COVID-19, или сертификат о вакцинации.</div>
                     </div>
                   </div>
                 </aside>
