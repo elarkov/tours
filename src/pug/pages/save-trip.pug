@@ -1,0 +1,36 @@
+extends ../layout/main-booking
+
+block mainVariables
+  - pageTitle = 'Сохраненные поездки';
+
+block mainContent
+  main.main
+    section.direction.direction--pt 
+      .container.direction__container 
+        .direction-content 
+          h2.direction-content__header Сохраненные поездки
+          .create-input 
+            +icon('plus-create', 'icon-plus-create')
+            p.create-input__text Создать папку для поездок
+          ul.direction-card 
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+            li.direction-card__item 
+              .direction-card__img 
+                img(src="img/card.jpg", alt="")
+              .direction-card__info 
+                .direction-card__name Москва
+            

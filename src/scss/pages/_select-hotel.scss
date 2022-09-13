@@ -34,6 +34,9 @@
         background: #fff;
         border-radius: 13px;
       }
+      &--bg-transparent {
+        background: transparent;
+      }
     }
     &__header {
       margin-bottom: 20px;
@@ -173,6 +176,9 @@
     @include md-block {
       margin-bottom: 0;
     }
+    &--personal {
+      margin-bottom: 5px;
+    }
   }
   &__title {
     margin-bottom: 12px;
@@ -180,6 +186,15 @@
     font-size: 16px;
     line-height: 22px;
     color: #07151C;
+    &--personal {
+      margin-bottom: 6px;
+      font-size: 14px;
+      line-height: 19px;
+      @include md-block {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
   }
   &__text {
     font-weight: 500;
@@ -210,6 +225,22 @@
     font-size: 16px;
     line-height: 22px;
     color: #FFFFFF;
+  }
+  &__dates {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #07151C;
+    @include md-block {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &--personal {
+    @include md-block {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -249,6 +280,14 @@
   font-size: 24px;
   line-height: 33px;
   color: #07151C;
+  &--xs {
+    font-size: 18px;
+    line-height: 22px;
+    @include md-block {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
 }
 
 .sidebar-map {

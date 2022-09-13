@@ -1,0 +1,90 @@
+extends ../layout/main-booking
+
+block mainVariables
+  - pageTitle = 'Мои бронирования';
+
+block mainContent
+  main.main
+    section.inner 
+      .container.inner__container 
+        .inner-content
+          .inner-content__main.inner-content__main--long.inner-content__main--bg-transparent
+            .personal-book 
+              .personal-book__item 
+                h2.personal-book__title Поездки
+                ul.personal-list 
+                  li.personal-list__item 
+                    p.personal-list__name Дубай
+                    p.personal-list__dates 23 февраля - 5 марта
+                    ul.personal-items 
+                      li.personal-items__item 
+                        .personal-items__top 
+                          .personal-items__card 
+                            .personal-items__img 
+                              img(src="img/card.jpg", alt="")
+                            .hotel-top.hotel-top--personal
+                              .hotel-top__right.hotel-top__right--personal 
+                                p.hotel-top__title.hotel-top__title--personal Название отеля
+                                .hotel-top__location 
+                                  +icon('location', 'hotel-location')
+                                  p.hotel-top__text Крым, Россия
+                                .hotel-top__dates 23 февраля - 5 марта
+                              .price.price--xs 25 457 ₽
+                        .personal-items__bottom 
+                          +icon('star-transition', 'icon-star-transition')
+                          p.personal-items__bottom-text Оцените проживание и оставьте отзыв
+                      li.personal-items__item 
+                        .personal-items__top 
+                          .personal-items__card 
+                            .personal-items__img 
+                              img(src="img/card.jpg", alt="")
+                            .hotel-top.hotel-top--personal 
+                              .hotel-top__right.hotel-top__right--personal 
+                                p.hotel-top__title.hotel-top__title--personal Название отеля
+                                .hotel-top__location 
+                                  +icon('location', 'hotel-location')
+                                  p.hotel-top__text Крым, Россия
+                                .hotel-top__dates 23 февраля - 5 марта
+                              .price.price--xs 25 457 ₽
+                        .personal-items__bottom 
+                          +icon('star-transition', 'icon-star-transition')
+                          p.personal-items__bottom-text Оцените проживание и оставьте отзыв
+              .personal-book__item 
+                h2.personal-book__title Туры
+                ul.personal-list 
+                  li.personal-list__item 
+                    p.personal-list__name Дубай
+                    p.personal-list__dates 23 февраля - 5 марта
+                    ul.personal-items 
+                      li.personal-items__item 
+                        .personal-items__top 
+                          .personal-items__card 
+                            .personal-items__img 
+                              img(src="img/card.jpg", alt="")
+                            .hotel-top.hotel-top--personal 
+                              .hotel-top__right.hotel-top__right--personal 
+                                p.hotel-top__title.hotel-top__title--personal Название тура
+                                .hotel-top__location 
+                                  +icon('location', 'hotel-location')
+                                  p.hotel-top__text Крым, Россия
+                                .hotel-top__dates 23 февраля - 5 марта
+                              .price.price--xs 25 457 ₽
+                        .personal-items__bottom 
+                          +icon('star-transition', 'icon-star-transition')
+                          p.personal-items__bottom-text Оцените проживание и оставьте отзыв
+                      li.personal-items__item 
+                        .personal-items__top 
+                          .personal-items__card 
+                            .personal-items__img 
+                              img(src="img/card.jpg", alt="")
+                            .hotel-top.hotel-top--personal 
+                              .hotel-top__right.hotel-top__right--personal 
+                                p.hotel-top__title.hotel-top__title--personal Название тура
+                                .hotel-top__location 
+                                  +icon('location', 'hotel-location')
+                                  p.hotel-top__text Крым, Россия
+                                .hotel-top__dates 23 февраля - 5 марта
+                              .price.price--xs 25 457 ₽
+                        .personal-items__bottom 
+                          +icon('star-transition', 'icon-star-transition')
+                          p.personal-items__bottom-text Оцените проживание и оставьте отзыв

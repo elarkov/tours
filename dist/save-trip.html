@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Description of the page less than 150 characters">
-    <title>Главная</title>
+    <title>Сохраненные поездки</title>
     <link rel="stylesheet" href="css/style.min.css?_v=20220913235743">
   </head>
   <body> 
@@ -34,8 +34,8 @@
           </div>
           <div class="overlay__layer js-side-menu__close"></div>
         </div>
-        <section class="s-main">
-          <header class="main-header"> 
+        <section class="s-main s-main--inner">
+          <header class="main-header main-header--inner"> 
             <div class="container main-header__container"> <a class="logo main-header__logo" href="">Название и фраза</a>
               <div class="info main-header__info"> 
                     <svg class="svg-icon icon-info">
@@ -53,157 +53,45 @@
                   </div>
             </div>
           </header>
-          <section class="hero"> 
-            <div class="container hero__container"> 
-              <h1 class="hero__header">Супер текст: мотивация к путешествиям</h1>
-              <ul class="main-nav"> 
-                <li class="main-nav__item"> <a href=""> 
-                        <svg class="svg-icon icon-building">
-                          <use xlink:href="img/sprite.svg#building"></use>
-                        </svg>Жилье</a></li>
-                <li class="main-nav__item"> <a href=""> 
-                        <svg class="svg-icon icon-flight">
-                          <use xlink:href="img/sprite.svg#flight"></use>
-                        </svg>Туры</a></li>
-              </ul>
-              <div class="main-searchbox"> 
-                <form class="form-search" action="">
-                  <label class="form-search__label form-search__label--search">
-                    <input class="form-search__input input-search" type="search" placeholder="Куда вы хотите поехать?">
-                  </label>
-                  <label class="form-search__label form-search__label--date">
-                    <input class="form-search__input input-date" type="text" placeholder="Дата заезда">
-                    <input class="form-search__input input-date" type="text" placeholder="Дата выезда">
-                  </label>
-                  <label class="form-search__label form-search__label--persons"><span class="guests"> <span>2 взрослых</span><span>· <span>без детей</span></span></span></label>
-                  <button class="button form-search__button" type="submit">Поиск</button>
-                </form>
-              </div>
-            </div>
-          </section>
         </section>
         <main class="main">
-          <section class="offers"> 
-            <div class="container offers__container">
-              <div class="offers-item"> 
-                    <svg class="svg-icon icon-hotel">
-                      <use xlink:href="img/sprite.svg#hotel"></use>
-                    </svg>
-                <p class="offers-item__text">Бронируй жилье в путешествиях по России</p>
-              </div>
-              <div class="offers-item"> 
-                    <svg class="svg-icon icon-backpack">
-                      <use xlink:href="img/sprite.svg#backpack"></use>
-                    </svg>
-                <p class="offers-item__text">Бронируй тур по России </p>
-              </div>
-              <div class="offers-item"> 
-                    <svg class="svg-icon icon-credit-card">
-                      <use xlink:href="img/sprite.svg#credit-card"></use>
-                    </svg>
-                <p class="offers-item__text">Выбирай тип оплаты </p>
-              </div>
-              <div class="offers-item"> 
-                    <svg class="svg-icon icon-expert">
-                      <use xlink:href="img/sprite.svg#expert"></use>
-                    </svg>
-                <p class="offers-item__text">Обращайся к travel-эксперту с любым вопросом </p>
-              </div>
-              <div class="offers-item"> 
-                    <svg class="svg-icon icon-map">
-                      <use xlink:href="img/sprite.svg#map"></use>
-                    </svg>
-                <p class="offers-item__text">Отправляйся в свое незабываемое путешествие </p>
-              </div>
-            </div>
-          </section>
-          <section class="direction"> 
+          <section class="direction direction--pt"> 
             <div class="container direction__container"> 
               <div class="direction-content"> 
-                <h2 class="direction-content__header">Направления для отелей</h2>
-                <p class="direction-content__text">В этих популярных местах вы точно найдете что-то для себя</p>
-                <ul class="direction-card"> 
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Москва</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Москва</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Москва</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Москва</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="direction-content"> 
-                <h2 class="direction-content__header">Направления для туров</h2>
-                <p class="direction-content__text">В этих популярных местах вы точно найдете что-то для себя</p>
-                <ul class="direction-card"> 
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Кавказ</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Калерия</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Алтай</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                  <li class="direction-card__item"> 
-                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
-                    <div class="direction-card__info"> 
-                      <div class="direction-card__name">Тыва</div>
-                      <div class="direction-card__count">8 295 вариантов</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <section class="mailing-list"> 
-            <div class="container mailing-list__container"> 
-              <div class="mailing-list__top">
-                    <svg class="svg-icon icon-mail">
-                      <use xlink:href="img/sprite.svg#mail"></use>
-                    </svg>
-                <h2 class="mailing-list__title">Подпишитесь, чтобы получать лучшие предложения</h2>
-              </div>
-              <form class="mailing-form" action="#">
-                <div class="mailing-form__row"> 
-                  <input class="mailing-form__input" type="email" name="email" placeholder="Введите ваш e-mail">
-                  <button class="mailing-form__button" type="submit">Подписаться</button>
+                <h2 class="direction-content__header">Сохраненные поездки</h2>
+                <div class="create-input"> 
+                      <svg class="svg-icon icon-plus-create">
+                        <use xlink:href="img/sprite.svg#plus-create"></use>
+                      </svg>
+                  <p class="create-input__text">Создать папку для поездок</p>
                 </div>
-                <div class="privacy">Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности.</div>
-              </form>
+                <ul class="direction-card"> 
+                  <li class="direction-card__item"> 
+                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
+                    <div class="direction-card__info"> 
+                      <div class="direction-card__name">Москва</div>
+                    </div>
+                  </li>
+                  <li class="direction-card__item"> 
+                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
+                    <div class="direction-card__info"> 
+                      <div class="direction-card__name">Москва</div>
+                    </div>
+                  </li>
+                  <li class="direction-card__item"> 
+                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
+                    <div class="direction-card__info"> 
+                      <div class="direction-card__name">Москва</div>
+                    </div>
+                  </li>
+                  <li class="direction-card__item"> 
+                    <div class="direction-card__img"> <picture><source srcset="img/card.webp" type="image/webp"><img src="img/card.jpg" alt=""></picture></div>
+                    <div class="direction-card__info"> 
+                      <div class="direction-card__name">Москва</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
         </main>

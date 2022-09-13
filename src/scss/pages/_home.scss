@@ -150,6 +150,9 @@
       max-width: 1190px;
     }
   }
+  &--pt {
+    padding-top: 50px;
+  }
 }
 .direction-content {
   & + .direction-content {
@@ -360,4 +363,21 @@
 .icon-mail {
   width: 44px;
   height: 35px;
+}
+
+.create-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  .svg-icon {
+    width: 25px;
+    height: 25px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #07151C;
+  }
 }
