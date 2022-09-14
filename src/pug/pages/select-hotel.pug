@@ -83,6 +83,15 @@ block mainContent
                     span.filter-select__name.filter-select__name--star Все включено
                   .filter-select__count 56 
               .filter-select 
+                .filter-select__title Цена
+                .filter-select__row.filter-select__row--range 
+                  .filter-select__slider(id="range-slider") 
+                  .filter-select__inputs 
+                    .filter-select__price
+                      input(id="input-0" type="tel" class="filter-select__inputs-input")
+                    .filter-select__price
+                      input(id="input-1" type="tel" class="filter-select__inputs-input")
+              .filter-select 
                 .filter-select__title Тип размещения
                 .filter-select__row 
                   label.filter-select__label

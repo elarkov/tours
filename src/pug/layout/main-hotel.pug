@@ -7,6 +7,7 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(name="description" content="Description of the page less than 150 characters")
         title #{pageTitle}
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.css")
         link(rel="stylesheet", href="css/style.min.css")
     body 
         include ../mixins/icon
@@ -22,4 +23,6 @@ html(lang="ru")
         +main
         +footer
         +popup
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js")
     script(src="js/app.min.js") 

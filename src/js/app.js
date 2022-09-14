@@ -7,6 +7,7 @@ import * as accordion from "./modules/accordion.js";
 import * as birthday from "./modules/select-birthday.js";
 import * as tooltip from "./modules/tooltip.js";
 import * as stickyBlock from "./modules/sticky-block.js";
+import * as rangeSlider from "./modules/range-slider.js";
 // import * as phoneinput from "./modules/phoneinput.js";
 // import * as renderQuiz from "./modules/quiz.js";
 // import * as toScroll from "./modules/toScroll.js";
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () { //dom is ready
   birthday.birthday();
   tooltip.tooltip();
   stickyBlock.stickyBlock();
+  rangeSlider.rangeSlider();
   // phoneinput.phoneInput();
   // //renderQuiz.renderQuiz();
   // popup.renderPopup();
