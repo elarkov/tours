@@ -220,6 +220,12 @@
     width: 100%;
     padding: 0;
   }
+  &--select {
+    display: none;
+    @include md-block {
+      display: block;
+    }
+  }
 }
 
 .form-search {
@@ -342,4 +348,115 @@
   span {
     font-size: 14px;
   }
+}
+
+.search-panel {
+  display: flex;
+  flex-direction: column;
+  @include md-block {
+    display: none;
+  }
+}
+
+.form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin: auto;
+  &__location {
+    padding: 8px 15px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    &-city {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      text-decoration-line: underline;
+      color: #FC7201;
+    }
+    &-date {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #5E5E5E;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__item {
+    padding: 7px 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #000000;
+    background: #FFFFFF;
+    border-radius: 4px;
+    text-align: right;
+    &--sort {
+      width: 114px;
+      flex: 0 0 114px;
+      background-image: url('../img/icon-sort.svg');
+      background-repeat: no-repeat;
+      background-position: 8px center;
+    }
+    &--filter {
+      width: 93px;
+      flex: 0 0 93px;
+      background-image: url('../img/icon-filter.svg');
+      background-repeat: no-repeat;
+      background-position: 8px center;
+    }
+    &--map {
+      width: 77px;
+      flex: 0 0 77px;
+      background-image: url('../img/icon-location.svg');
+      background-repeat: no-repeat;
+      background-position: 8px center;
+    }
+  }
+}
+
+.popular-select {
+  
+  
+  &__row {
+    input {
+      position: absolute;
+      left: 0;
+      appearance: none;
+      opacity: 0;
+      visibility: hidden;
+      &:checked + .popular-select__item {
+        background: rgba(252, 114, 1, 0.1);
+        .svg-icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__item {
+    padding: 11px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .svg-icon {
+      opacity: 0;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+  }
+}
+
+.icon-done {
+  width: 14px;
+  height: 12px;
 }

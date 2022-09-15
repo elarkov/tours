@@ -1,4 +1,5 @@
 .inner {
+  position: relative;
   padding-top: 15px;
   padding-bottom: 50px;
   background: #F8F8F8;
@@ -513,6 +514,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 30px;
   @include md-block {
     flex-direction: row;
     flex-wrap: wrap;
@@ -579,6 +581,12 @@
       font-size: 12px;
       line-height: 16px;
       color: #07151C;
+    }
+    &--border-bottom {
+      border-bottom: 1px solid rgba(118, 118, 118, 0.3);
+    }
+    &--padding-bottom {
+      padding-bottom: 15px;
     }
   }
   &__route {
@@ -722,13 +730,28 @@
 	top: -10px;
 }
 
+.noUi-horizontal .noUi-origin {
+  @include md-block {
+    width: 308px;
+  }
+}
+
+.noUi-horizontal .noUi-handle-lower {
+  right: 0;
+}
+
 .noUi-horizontal .noUi-handle-upper {
 	right: 0;
 }
+.noUi-target {
+  border: 1px solid transparent;
+}
 
-#input-0 {
+#input-0,
+#input-01 {
   text-align: left;
 }
-#input-1 {
+#input-1,
+#input-02 {
   text-align: right;
 }

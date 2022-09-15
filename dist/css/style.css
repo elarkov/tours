@@ -942,32 +942,42 @@ input::placeholder {
   margin-right: auto;
   padding: 20px;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 13px;
   overflow-y: inherit;
+}
+
+.popup--no-brs {
+  border-radius: 0;
+}
+
+.popup--sort {
+  padding: 0;
 }
 
 .popup__title {
   margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.25;
-  color: #000;
-  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #07151C;
+  text-align: left;
 }
 
 .popup__btn-close {
   position: absolute;
-  right: -10px;
-  top: -13px;
+  right: 10px;
+  top: 6px;
   width: 30px;
   height: 30px;
   border-radius: 100%;
   border: 0;
   cursor: pointer;
+  color: #A9A9A9;
 }
 
 .popup__btn-close::before {
   content: "✕";
+  font-size: 30px;
 }
 
 .popup-form__button {
@@ -1138,6 +1148,10 @@ input::placeholder {
   border-radius: 5px;
 }
 
+.main-searchbox--select {
+  display: none;
+}
+
 .form-search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1241,6 +1255,150 @@ input::placeholder {
 
 .guests span {
   font-size: 14px;
+}
+
+.search-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin: auto;
+}
+
+.form-panel__location {
+  padding: 8px 15px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.form-panel__location-city {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #FC7201;
+}
+
+.form-panel__location-date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #5E5E5E;
+}
+
+.form-panel__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.form-panel__item {
+  padding: 7px 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #000000;
+  background: #FFFFFF;
+  border-radius: 4px;
+  text-align: right;
+}
+
+.form-panel__item--sort {
+  width: 114px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 114px;
+          flex: 0 0 114px;
+  background-image: url("../img/icon-sort.svg");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+}
+
+.form-panel__item--filter {
+  width: 93px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 93px;
+          flex: 0 0 93px;
+  background-image: url("../img/icon-filter.svg");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+}
+
+.form-panel__item--map {
+  width: 77px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 77px;
+          flex: 0 0 77px;
+  background-image: url("../img/icon-location.svg");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+}
+
+.popular-select__row input {
+  position: absolute;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popular-select__row input:checked + .popular-select__item {
+  background: rgba(252, 114, 1, 0.1);
+}
+
+.popular-select__row input:checked + .popular-select__item .svg-icon {
+  opacity: 1;
+}
+
+.popular-select__item {
+  padding: 11px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popular-select__item .svg-icon {
+  opacity: 0;
+}
+
+.popular-select__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.icon-done {
+  width: 14px;
+  height: 12px;
 }
 
 .form-error {
@@ -1671,7 +1829,89 @@ input::placeholder {
   color: #07151C;
 }
 
+.btn-more {
+  width: 210px;
+  height: 50px;
+  display: block;
+  margin: auto;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #185c5c;
+  border: 1px solid #185c5c;
+}
+
+.similar-offers {
+  padding-top: 50px;
+}
+
+.similar-offers__title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  color: #07151C;
+}
+
+.pay-now {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 13px;
+  margin-top: 30px;
+  padding: 13px 10px 10px;
+  background: #FFFFFF;
+  border-radius: 6px 6px 0px 0px;
+  overflow: hidden;
+}
+
+.pay-now .svg-icon {
+  width: 15px;
+  height: 8px;
+  margin: auto;
+}
+
+.pay-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pay-info--df-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pay-info__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #07151C;
+}
+
+.pay-info__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #07151C;
+}
+
 .inner {
+  position: relative;
   padding-top: 15px;
   padding-bottom: 50px;
   background: #F8F8F8;
@@ -2262,6 +2502,7 @@ input::placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 15px;
+  margin-bottom: 30px;
 }
 
 .card-tour__item {
@@ -2342,6 +2583,14 @@ input::placeholder {
   font-size: 12px;
   line-height: 16px;
   color: #07151C;
+}
+
+.card-tour__info--border-bottom {
+  border-bottom: 1px solid rgba(118, 118, 118, 0.3);
+}
+
+.card-tour__info--padding-bottom {
+  padding-bottom: 15px;
 }
 
 .card-tour__route {
@@ -2529,15 +2778,25 @@ input::placeholder {
   top: -10px;
 }
 
+.noUi-horizontal .noUi-handle-lower {
+  right: 0;
+}
+
 .noUi-horizontal .noUi-handle-upper {
   right: 0;
 }
 
-#input-0 {
+.noUi-target {
+  border: 1px solid transparent;
+}
+
+#input-0,
+#input-01 {
   text-align: left;
 }
 
-#input-1 {
+#input-1,
+#input-02 {
   text-align: right;
 }
 
@@ -2960,22 +3219,22 @@ input::placeholder {
 
 .cost-item__name {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 22px;
   color: #07151C;
 }
 
 .cost-item__value {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 19px;
   color: #000000;
 }
 
 .cost-item__mini {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 19px;
   color: #747474;
 }
 
@@ -2996,8 +3255,8 @@ input::placeholder {
 .cost-item__bottom {
   padding-top: 20px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 19px;
   color: #000000;
 }
 
@@ -3029,15 +3288,15 @@ input::placeholder {
 
 .cost-total__name {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 22px;
   color: #07151C;
 }
 
 .cost-total__price {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
+  font-size: 20px;
+  line-height: 27px;
   color: #07151C;
 }
 
@@ -3773,7 +4032,7 @@ input::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(118, 118, 118, 0.3);
@@ -3781,8 +4040,8 @@ input::placeholder {
 
 .select-date__top-text {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 23px;
   color: #07151C;
 }
 
@@ -3832,8 +4091,8 @@ input::placeholder {
 
 .select-date__count span {
   font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 19px;
   color: #07151C;
 }
 
@@ -3876,15 +4135,15 @@ input::placeholder {
 
 .select-date__total-days {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 19px;
   color: #747474;
 }
 
 .select-date__duration {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 19px;
   color: #000000;
 }
 
@@ -4192,6 +4451,10 @@ input[type=number] {
     padding: 0;
   }
 
+  .main-searchbox--select {
+    display: block;
+  }
+
   .form-search {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4237,6 +4500,10 @@ input[type=number] {
 
   .guests {
     border: none;
+  }
+
+  .search-panel {
+    display: none;
   }
 
   .main-footer__container {
@@ -4431,6 +4698,16 @@ input[type=number] {
     border-radius: 5px;
   }
 
+  .similar-offers__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+  .pay-now {
+    display: none;
+  }
+
   .inner__container {
     max-width: 1190px;
   }
@@ -4551,6 +4828,10 @@ input[type=number] {
     width: calc(50% - 10px);
   }
 
+  .noUi-horizontal .noUi-origin {
+    width: 308px;
+  }
+
   .booking-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4593,6 +4874,36 @@ input[type=number] {
     -webkit-transform: unset;
         -ms-transform: unset;
             transform: unset;
+  }
+
+  .cost-item__name {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .cost-item__value {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .cost-item__mini {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .cost-item__bottom {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .cost-total__name {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .cost-total__price {
+    font-size: 24px;
+    line-height: 33px;
   }
 
   .score__text {
@@ -4805,6 +5116,30 @@ input[type=number] {
   .tour-testimonials__button {
     margin: 0;
     margin-top: 35px;
+  }
+
+  .select-date__top {
+    gap: 20px;
+  }
+
+  .select-date__top-text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .select-date__count span {
+    font-size: 16px;
+    ine-height: 22px;
+  }
+
+  .select-date__total-days {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .select-date__duration {
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .tour-review__block--row {

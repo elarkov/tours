@@ -2,14 +2,306 @@ mixin popup()
   .popup-overlay(data-popup="popup-1") 
     .popup 
       button.close-btn.popup__btn-close(data-target="popup-1") 
-      p.popup__title Получите дизайн-проект!
-      p.popup__subtext Благодаря дизайн-проекту у вас не возникнет проблем с выбором чистовых отделочных материалов, их объемом и конечной стоимостью.
+      p.popup__title К оплате в отеле
       .popup__inner
-        form.popup-form(autocomplete="off")
-          input.popup-form__input(type="text" name="client" placeholder="Ваше имя" required)
-          input.popup-form__input(type="tel" name="phone" maxlength="18" data-tel-input placeholder="Ваш телефон" required)
-          textarea(name="msg", cols="30", rows="5" placeholder="Комментарий")
-          button.button.popup-form__button(type="submit" disabled) Отправить
-          label.privacy 
-            input(type="checkbox" checked disabled)
-            span Я ознакомлен с <a href="#">Политикой конфиденциальности</a> и даю согласие на обработку персональных данных
+        .cost-item 
+          .cost-item__top 
+            .cost-item__first
+              .cost-item__label
+                .cost-item__name Стоимость номера
+                .cost-item__mini для 2 взрослых на 5 ночей
+              .cost-item__value 5 х 9680 ₽
+            .cost-item__first 
+              .cost-item__label
+                .cost-item__mini В том числе НДС
+              .cost-item__value 6342,39 ₽
+          .cost-item__middle 
+            .cost-total 
+              .cost-total__name К оплате сейчас
+              .cost-total__price 25 457 ₽
+            .cost-item__mini НДС входит в стоимость
+          .cost-item__bottom Из-за сложной эпидемиологической ситуации в мире при регистрации заезда может потребоваться справка, подтверждающая отрицательный результат теста на COVID-19, или сертификат о вакцинации.
+  .popup-overlay(data-popup="popup-2") 
+    .popup 
+      button.close-btn.popup__btn-close(data-target="popup-2") 
+      .popup__inner
+        .select-date 
+          .select-date__top 
+            p.select-date__top-text Активный тур "Осень, зима, весна" (Горная Адыгея и Кубань)
+            p.select-date__total-days 7 дней
+            p.select-date__duration Старт: <span class="select-date__day">20 марта 2022 (Воскресенье)</span>
+            p.select-date__duration Финиш: <span class="select-date__day">26 марта 2022 (Суббота)</span>
+            .filter__options
+              select.filter__select 
+                option(value="1") 1-6 марта
+                option(value="2") 7-13 марта
+                option(value="3") 14-20 марта
+                option(value="4") 20-26 марта
+          .select-date__bottom 
+            .select-date__count 
+              span Количество участников
+              .qty
+                button.qty__btn.qty__btn--minus &minus;
+                input(type="number" name="qty" min="1" max="10" step="1" value="1")
+                button.qty__btn.qty__btn--plus &plus; 
+          .cost-item.cost-item--tours
+            .cost-item__first
+              .cost-item__label
+                .cost-item__name К оплате сейчас
+                .cost-item__mini 26 000 ₽ х 1 
+              .cost-item__value 26 000 ₽
+            .cost-item__first
+              .cost-item__label
+                .cost-item__name Комиссия сервиса
+              .cost-item__value 500 ₽
+          .cost-total
+            .cost-total__text Итого
+            .cost-total__price 25 457 ₽
+  .popup-overlay(data-popup="popup-3") 
+    .popup 
+      button.close-btn.popup__btn-close(data-target="popup-3") 
+      .popup__inner
+        .select-date 
+          .select-date__top 
+            p.select-date__top-text Выберите дату
+            .filter__options
+              select.filter__select 
+                option(value="1") 1-6 марта
+                option(value="2") 7-13 марта
+                option(value="3") 14-20 марта
+                option(value="4") 20-26 марта
+          .select-date__bottom 
+            .select-date__tange 12 из 18 мест осталось
+            .select-date__count 
+              span Количество человек
+              .qty
+                button.qty__btn.qty__btn--minus &minus;
+                input(type="number" name="qty" min="1" max="10" step="1" value="1")
+                button.qty__btn.qty__btn--plus &plus; 
+            .select-date__price 25 457 ₽
+          .select-date__nav 
+            button.select-date__button Забронировать тур
+            .select-date__mini При отмене бронирования любого путешествия в течение 24 часов после оплаты вы получаете полный возврат.
+  .popup-overlay(data-popup="popup-sort") 
+    .popup.popup--no-brs.popup--sort 
+      .popup__inner
+        .popular-select 
+          label.popular-select__row
+            input(type="radio" name="popular" value="По популярности")
+            .popular-select__item
+              span.popular-select__text По популярности
+              +icon('done', 'icon-done')
+          label.popular-select__row
+            input(type="radio" name="popular" value="Cначала дешевые")
+            .popular-select__item
+              span.popular-select__text Cначала дешевые
+              +icon('done', 'icon-done')
+          label.popular-select__row
+            input(type="radio" name="popular" value="Cначала дорогие")
+            .popular-select__item
+              span.popular-select__text Cначала дорогие
+              +icon('done', 'icon-done')
+          label.popular-select__row
+            input(type="radio" name="popular" value="С высокой оценкой")
+            .popular-select__item
+              span.popular-select__text С высокой оценкой
+              +icon('done', 'icon-done')
+  .popup-overlay(data-popup="popup-filter") 
+    .popup.popup--no-brs
+      .popup__inner
+        .popup-filter 
+          .filter-select 
+            .filter-select__title Питание
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="food" value="Питание не включено")
+                span.filter-select__name Питание не включено
+              .filter-select__count 56
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="food" value="Завтрак включен")
+                span.filter-select__name Завтрак включен
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="food" value="Завтрак + обед или ужин")
+                span.filter-select__name Завтрак + обед или ужин 
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="food" value="Завтрак, обед и ужин включены ")
+                span.filter-select__name Завтрак, обед и ужин включены 
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="food" value="Все включено")
+                span.filter-select__name Все включено
+              .filter-select__count 56
+          .filter-select 
+            .filter-select__title Количество звезд
+            .filter-select__row 
+              label.filter-select__label.filter-select__label--s1
+                input.filter-select__input(type="radio" name="rating" value="5")
+                span.filter-select__name.filter-select__name--star Питание не включено
+              .filter-select__count 56
+            .filter-select__row 
+              label.filter-select__label.filter-select__label--s2
+                input.filter-select__input(type="radio" name="rating" value="4")
+                span.filter-select__name.filter-select__name--star Завтрак включен
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label.filter-select__label--s3
+                input.filter-select__input(type="radio" name="rating" value="3")
+                span.filter-select__name.filter-select__name--star Завтрак + обед или ужин 
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label.filter-select__label--s4
+                input.filter-select__input(type="radio" name="rating" value="2")
+                span.filter-select__name.filter-select__name--star Завтрак, обед и ужин включены 
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label.filter-select__label--s5
+                input.filter-select__input(type="radio" name="rating" value="1")
+                span.filter-select__name.filter-select__name--star Все включено
+              .filter-select__count 56 
+          .filter-select.filter-select--range 
+            .filter-select__title Цена
+            .filter-select__row.filter-select__row--range 
+              .filter-select__slider(id="range-price") 
+              .filter-select__inputs 
+                .filter-select__price
+                  input(id="input-0" type="tel" class="filter-select__inputs-input")
+                .filter-select__price
+                  input(id="input-1" type="tel" class="filter-select__inputs-input")
+          .filter-select
+            .filter-select__title Длительность
+            .filter-select__row.filter-select__row--range 
+              .filter-select__slider(id="range-duration") 
+              .filter-select__inputs 
+                .filter-select__price
+                  input(id="input-01" type="tel" class="filter-select__inputs-input duration-range")
+                .filter-select__price
+                  input(id="input-02" type="tel" class="filter-select__inputs-input duration-range")
+          .filter-select 
+            .filter-select__title Тип размещения
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="building" value="Отели")
+                span.filter-select__name Отели
+              .filter-select__count 56
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="building" value="Хостелы")
+                span.filter-select__name Хостелы
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="building" value="Апартаменты")
+                span.filter-select__name Апартаменты 
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="building" value="Коттеджи, виллы, бунгало")
+                span.filter-select__name Коттеджи, виллы, бунгало 
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="building" value="Кемпинги")
+                span.filter-select__name Кемпинги
+              .filter-select__count 56
+          .filter-select 
+            .filter-select__title Услуги и удобства
+            .filter-select__item
+              .filter-select__subtitle В отеле
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Бесплатный интернет")
+                  span.filter-select__name Бесплатный интернет
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Трансфер")
+                  span.filter-select__name Трансфер
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Парковка")
+                  span.filter-select__name Парковка 
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Бассейн")
+                  span.filter-select__name Бассейн 
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Фитнес")
+                  span.filter-select__name Фитнес
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Бар")
+                  span.filter-select__name Бар
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Пляж рядом")
+                  span.filter-select__name Пляж рядом
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="building" value="Горнолыжный склон рядом")
+                  span.filter-select__name Горнолыжный склон рядом
+                .filter-select__count 56
+            .filter-select__item
+              .filter-select__subtitle В номере
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="room" value="Кондиционер")
+                  span.filter-select__name Кондиционер
+                .filter-select__count 56
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="room" value="Ванная комната в номере")
+                  span.filter-select__name Ванная комната в номере
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="room" value="Окно в номере")
+                  span.filter-select__name Окно в номере 
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="room" value="Кухня")
+                  span.filter-select__name Кухня
+                .filter-select__count 56 
+              .filter-select__row 
+                label.filter-select__label
+                  input.filter-select__input(type="radio" name="room" value="Балкон")
+                  span.filter-select__name Балкон
+                .filter-select__count 56
+          .filter-select 
+            .filter-select__title Вид из окна
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="view" value="На море")
+                span.filter-select__name На море
+              .filter-select__count 56
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="view" value="На горы")
+                span.filter-select__name На горы
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="view" value="На реку/озеро")
+                span.filter-select__name На реку/озеро
+              .filter-select__count 56 
+            .filter-select__row 
+              label.filter-select__label
+                input.filter-select__input(type="radio" name="view" value="На город")
+                span.filter-select__name На город 
+              .filter-select__count 56 
+          .filter-bottom 
+            button.filter-bottom__reset(type="reset") Очистить
+            button.filter-bottom__apply(type="submit") Применить фильтры

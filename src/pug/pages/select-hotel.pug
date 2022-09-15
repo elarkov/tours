@@ -14,7 +14,7 @@ block mainContent
             a Отели Крыма
         .inner-content 
           aside.inner-content__sidebar 
-            .sidebar-content
+            .sidebar-content.js-filter-range
               .sidebar-map карта Здесь предствалены все варианты размещения из возможных по данному параметру на данные даты
               .filter
                 .filter__item 
@@ -82,15 +82,24 @@ block mainContent
                     input.filter-select__input(type="radio" name="rating" value="1")
                     span.filter-select__name.filter-select__name--star Все включено
                   .filter-select__count 56 
-              .filter-select 
+              .filter-select.filter-select--range 
                 .filter-select__title Цена
                 .filter-select__row.filter-select__row--range 
-                  .filter-select__slider(id="range-slider") 
+                  .filter-select__slider(id="range-price") 
                   .filter-select__inputs 
                     .filter-select__price
                       input(id="input-0" type="tel" class="filter-select__inputs-input")
                     .filter-select__price
                       input(id="input-1" type="tel" class="filter-select__inputs-input")
+              .filter-select
+                .filter-select__title Длительность
+                .filter-select__row.filter-select__row--range 
+                  .filter-select__slider(id="range-duration") 
+                  .filter-select__inputs 
+                    .filter-select__price
+                      input(id="input-01" type="tel" class="filter-select__inputs-input duration-range")
+                    .filter-select__price
+                      input(id="input-02" type="tel" class="filter-select__inputs-input duration-range")
               .filter-select 
                 .filter-select__title Тип размещения
                 .filter-select__row 

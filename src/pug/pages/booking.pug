@@ -5,6 +5,7 @@ block mainVariables
 
 block mainContent
   main.main
+    
     section.inner 
       .container.inner__container 
         .breadcrumbs 
@@ -17,6 +18,7 @@ block mainContent
           .breadcrumbs__item.breadcrumbs__item--current 
             a Бронирование
         .inner-content.js-sticky
+          
           .inner-content__main
             .booking-card 
               .booking-card__img 
@@ -102,6 +104,11 @@ block mainContent
                       img(src="img/ymoney.png", alt="")
                 button.booking-button Завершить бронирование
                 .privacy Нажимая «Завершить бронирование», Вы принимаете Правила бронирования.
+            .pay-now.js-popup(data-target="popup-1") 
+              +icon('chevron-up', 'icon-chevron-up')
+              .pay-info 
+                p.pay-info__text К оплате сейчас
+                p.pay-info__price 0₽
           aside.inner-content__sidebar 
             .sidebar-content.js-sticky__item
               .cost-item 

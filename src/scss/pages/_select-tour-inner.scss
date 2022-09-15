@@ -237,15 +237,22 @@
   &__top {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(118, 118, 118, 0.3);
+    @include md-block {
+      gap: 20px;
+    }
     &-text {
       font-weight: 600;
-      font-size: 18px;
-      line-height: 25px;
+      font-size: 16px;
+      line-height: 23px;
       color: #07151C;
+      @include md-block {
+        font-size: 18px;
+        line-height: 25px;
+      }
     }
   }
   &__bottom {
@@ -273,9 +280,13 @@
     justify-content: space-between;
     span {
       font-weight: 600;
-      font-size: 16px;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 19px;
       color: #07151C;
+      @include md-block {
+        font-size: 16px;
+        ine-height: 22px;
+      }
     }
   }
   &__button {
@@ -308,15 +319,23 @@
   }
   &__total-days {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     color: #747474;
+    @include md-block {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__duration {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     color: #000000;
+    @include md-block {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__day {
     color: #747474;

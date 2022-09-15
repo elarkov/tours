@@ -396,21 +396,33 @@
   }
   &__name {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 22px;
     color: #07151C;
+    @include md-block {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
   &__value {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     color: #000000;
+    @include md-block {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__mini {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     color: #747474;
+    @include md-block {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__middle {
     display: flex;
@@ -423,9 +435,13 @@
   &__bottom {
     padding-top: 20px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     color: #000000;
+    @include md-block {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &--tours {
     display: flex;
@@ -443,15 +459,23 @@
   justify-content: space-between;
   &__name {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 22px;
     color: #07151C;
+    @include md-block {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
   &__price {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 20px;
+    line-height: 27px;
     color: #07151C;
+    @include md-block {
+      font-size: 24px;
+      line-height: 33px;
+    }
   }
   &--tours {
     margin-bottom: 20px;

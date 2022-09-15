@@ -13,7 +13,7 @@ import * as rangeSlider from "./modules/range-slider.js";
 // import * as toScroll from "./modules/toScroll.js";
 // import * as spamdetect from "./modules/spamDetect.js";
 // import * as ajaxSend from "./modules/ajax.js";
-// import * as popup from "./modules/popup.js";
+ import * as popup from "./modules/popup.js";
 // import * as accordion from "./modules/accordion.js";
 // import * as lazyload from "./modules/lazyload.js";
 
@@ -31,9 +31,10 @@ document.addEventListener('DOMContentLoaded', function () { //dom is ready
   tooltip.tooltip();
   stickyBlock.stickyBlock();
   rangeSlider.rangeSlider();
+  popup.renderPopup();
   // phoneinput.phoneInput();
   // //renderQuiz.renderQuiz();
-  // popup.renderPopup();
+ 
   // toScroll.doScroll();
   // spamdetect.spamDetect();
   // ajaxSend.ajaxSend();

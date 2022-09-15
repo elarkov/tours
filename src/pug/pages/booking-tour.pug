@@ -92,6 +92,11 @@ block mainContent
                       img(src="img/ymoney.png", alt="")
                 button.booking-button Завершить бронирование
                 .privacy Нажимая «Завершить бронирование», Вы принимаете Правила бронирования.
+            .pay-now.js-popup(data-target="popup-2") 
+              +icon('chevron-up', 'icon-chevron-up')
+              .pay-info 
+                p.pay-info__text К оплате сейчас
+                p.pay-info__price 0₽
           aside.inner-content__sidebar
             .sidebar-content.js-sticky__item 
               .select-date 
