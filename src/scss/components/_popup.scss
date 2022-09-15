@@ -31,6 +31,11 @@
   background-color: #fff;
   border-radius: 13px;
   overflow-y: inherit;
+  &-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   &--no-brs {
     border-radius: 0;
   }

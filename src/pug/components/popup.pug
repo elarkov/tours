@@ -109,7 +109,7 @@ mixin popup()
   .popup-overlay(data-popup="popup-filter") 
     .popup.popup--no-brs
       .popup__inner
-        .popup-filter 
+        .popup-filter.js-filter-range 
           .filter-select 
             .filter-select__title Питание
             .filter-select__row 
@@ -167,16 +167,16 @@ mixin popup()
           .filter-select.filter-select--range 
             .filter-select__title Цена
             .filter-select__row.filter-select__row--range 
-              .filter-select__slider(id="range-price") 
+              .filter-select__slider.range-price 
               .filter-select__inputs 
                 .filter-select__price
                   input(id="input-0" type="tel" class="filter-select__inputs-input")
                 .filter-select__price
                   input(id="input-1" type="tel" class="filter-select__inputs-input")
-          .filter-select
+          .filter-select.filter-select--range
             .filter-select__title Длительность
             .filter-select__row.filter-select__row--range 
-              .filter-select__slider(id="range-duration") 
+              .filter-select__slider.range-duration 
               .filter-select__inputs 
                 .filter-select__price
                   input(id="input-01" type="tel" class="filter-select__inputs-input duration-range")

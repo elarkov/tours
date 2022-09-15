@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Description of the page less than 150 characters">
     <title>Название отеля</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20220915153858">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220915223425">
   </head>
   <body> 
         <div class="overlay js-side-menu__overlay">
@@ -627,7 +627,7 @@
         <div class="popup-overlay" data-popup="popup-filter"> 
           <div class="popup popup--no-brs">
             <div class="popup__inner">
-              <div class="popup-filter"> 
+              <div class="popup-filter js-filter-range"> 
                 <div class="filter-select"> 
                   <div class="filter-select__title">Питание</div>
                   <div class="filter-select__row"> 
@@ -697,7 +697,7 @@
                 <div class="filter-select filter-select--range"> 
                   <div class="filter-select__title">Цена</div>
                   <div class="filter-select__row filter-select__row--range"> 
-                    <div class="filter-select__slider" id="range-price"> </div>
+                    <div class="filter-select__slider range-price"> </div>
                     <div class="filter-select__inputs"> 
                       <div class="filter-select__price">
                         <input class="filter-select__inputs-input" id="input-0" type="tel">
@@ -708,10 +708,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="filter-select">
+                <div class="filter-select filter-select--range">
                   <div class="filter-select__title">Длительность</div>
                   <div class="filter-select__row filter-select__row--range"> 
-                    <div class="filter-select__slider" id="range-duration"> </div>
+                    <div class="filter-select__slider range-duration"> </div>
                     <div class="filter-select__inputs"> 
                       <div class="filter-select__price">
                         <input class="filter-select__inputs-input duration-range" id="input-01" type="tel">
@@ -878,5 +878,5 @@
           </div>
         </div>
   </body>
-  <script src="js/app.min.js?_v=20220915153858"> </script>
+  <script src="js/app.min.js?_v=20220915223425"> </script>
 </html>
